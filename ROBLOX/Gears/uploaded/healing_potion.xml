@@ -1,9 +1,10 @@
 <roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBXED3270EE08104C01975BFCF3A245C7C0">
+	<Item class="Tool" referent="RBX0">
 		<Properties>
-			<bool name="CanBeDropped">true</bool>
+			<int name="ActivationState">0</int>
+			<int name="BackendToolState">2</int>
 			<bool name="Enabled">true</bool>
 			<CoordinateFrame name="Grip">
 				<X>0.100000001</X>
@@ -19,13 +20,11 @@
 				<R21>0</R21>
 				<R22>0.217036352</R22>
 			</CoordinateFrame>
-			<bool name="ManualActivationOnly">false</bool>
 			<string name="Name">HealingPotion</string>
-			<bool name="RequiresHandle">true</bool>
 			<Content name="TextureId"><url>http://www.roblox.com/asset/?id=11418339</url></Content>
-			<string name="ToolTip"></string>
+			<bool name="archivable">true</bool>
 		</Properties>
-		<Item class="Part" referent="RBX839822E29C3F47578B87911C3B31F7AA">
+		<Item class="Part" referent="RBX1">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<float name="BackParamA">-0.5</float>
@@ -38,9 +37,9 @@
 				<token name="BottomSurfaceInput">0</token>
 				<int name="BrickColor">1002</int>
 				<CoordinateFrame name="CFrame">
-					<X>-0.437747955</X>
-					<Y>0.689849257</Y>
-					<Z>0.499969482</Z>
+					<X>4.56225204</X>
+					<Y>21.0898495</Y>
+					<Z>42.4999695</Z>
 					<R00>-0.999999523</R00>
 					<R01>-9.04471017e-006</R01>
 					<R02>2.48451997e-005</R02>
@@ -52,10 +51,9 @@
 					<R22>-1.00000012</R22>
 				</CoordinateFrame>
 				<bool name="CanCollide">true</bool>
-				<PhysicalProperties name="CustomPhysicalProperties">
-					<CustomPhysics>false</CustomPhysics>
-				</PhysicalProperties>
+				<bool name="DraggingV1">false</bool>
 				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
 				<float name="Friction">0.300000012</float>
 				<float name="FrontParamA">-0.5</float>
 				<float name="FrontParamB">0.5</float>
@@ -88,7 +86,7 @@
 					<Y>0</Y>
 					<Z>0</Z>
 				</Vector3>
-				<token name="formFactorRaw">2</token>
+				<bool name="archivable">true</bool>
 				<token name="shape">1</token>
 				<Vector3 name="size">
 					<X>1</X>
@@ -96,7 +94,7 @@
 					<Z>1</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBXECBB13455E9442E1A27403CC916887D8">
+			<Item class="SpecialMesh" referent="RBX2">
 				<Properties>
 					<token name="LODX">2</token>
 					<token name="LODY">2</token>
@@ -119,9 +117,10 @@
 						<Y>1</Y>
 						<Z>1</Z>
 					</Vector3>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX37AB1BCCDA59447696F8625E30D61D13">
+			<Item class="Weld" referent="RBX3">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-4.71828389e-006</X>
@@ -154,9 +153,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX2E091B4540DA4FC2985B3F8A6DE4D901">
+			<Item class="Weld" referent="RBX4">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-1.34138972e-007</X>
@@ -189,9 +189,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXE6880BC6F869402788FD9E7B2F36C1EF">
+			<Item class="Weld" referent="RBX5">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>3.64912034e-006</X>
@@ -224,9 +225,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX40FB87A974294BB48CD1A882450816B8">
+			<Item class="Weld" referent="RBX6">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.6321755e-007</X>
@@ -259,9 +261,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX1B71B19656604E5BA265CC98F56FF629">
+			<Item class="Weld" referent="RBX7">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -272,10 +275,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>5.25072437e-006</X>
@@ -286,17 +289,18 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXCFBA17C4CB2D44C0A15F594FBBEB6455">
+			<Item class="Weld" referent="RBX8">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -307,10 +311,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.533214211</X>
@@ -321,17 +325,18 @@
 						<R02>-0.999999702</R02>
 						<R10>8.15887191e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726948</R12>
+						<R12>0.000791507307</R12>
 						<R20>1</R20>
-						<R21>-8.15380652e-010</R21>
-						<R22>-6.19810758e-010</R22>
+						<R21>8.10171485e-010</R21>
+						<R22>1.58504349e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXFDD3910A8FCF484C80AF473EA3E385FF">
+			<Item class="Weld" referent="RBX9">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -342,21 +347,21 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-1.12273511e-007</X>
 						<Y>2.60849974e-005</Y>
 						<Z>-0.533189535</Z>
 						<R00>1</R00>
-						<R01>-8.33252689e-010</R01>
-						<R02>-3.96865235e-010</R02>
+						<R01>8.50161941e-010</R01>
+						<R02>3.96162853e-010</R02>
 						<R10>8.3357371e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000809622463</R12>
+						<R12>0.000782926101</R12>
 						<R20>3.96190469e-010</R20>
 						<R21>-0.000809622463</R21>
 						<R22>0.999999702</R22>
@@ -364,9 +369,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX069A6D446BB34114BC4AFD96B3C2B650">
+			<Item class="Weld" referent="RBX10">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -377,10 +383,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.533214211</X>
@@ -391,17 +397,18 @@
 						<R02>-0.999999702</R02>
 						<R10>8.56068161e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726948</R12>
+						<R12>0.000791507307</R12>
 						<R20>1</R20>
-						<R21>-8.55560567e-010</R21>
-						<R22>-6.21001806e-010</R22>
+						<R21>8.50351511e-010</R21>
+						<R22>1.59694272e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXEDE2FEB514E64A2D956BAD55446B6D29">
+			<Item class="Weld" referent="RBX11">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -412,10 +419,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-5.43287024e-006</X>
@@ -423,20 +430,21 @@
 						<Z>0.400390655</Z>
 						<R00>8.48401349e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000801041257</R02>
+						<R02>0.000774821616</R02>
 						<R10>-6.20273943e-010</R10>
 						<R11>0.000801041257</R11>
 						<R12>-0.999999702</R12>
 						<R20>-1</R20>
-						<R21>8.47904247e-010</R21>
-						<R22>6.20953344e-010</R22>
+						<R21>-8.37917902e-010</R21>
+						<R22>-1.59147528e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXFF742618167D4903B0D6CC3E6BEA7B68">
+			<Item class="Weld" referent="RBX12">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -447,10 +455,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-2.92850495e-006</X>
@@ -458,10 +466,10 @@
 						<Z>-0.132823572</Z>
 						<R00>8.56068161e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000817726948</R02>
+						<R02>0.000791507307</R02>
 						<R10>-1</R10>
-						<R11>8.55560678e-010</R11>
-						<R12>6.21001806e-010</R12>
+						<R11>-8.50351511e-010</R11>
+						<R12>-1.59694272e-010</R12>
 						<R20>6.20301976e-010</R20>
 						<R21>-0.000817726948</R21>
 						<R22>0.999999702</R22>
@@ -469,9 +477,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX56878698D81A46A0ADA9DC231974CE6D">
+			<Item class="Weld" referent="RBX13">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -482,21 +491,21 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>1.20404536e-007</X>
 						<Y>1.7940567e-005</Y>
 						<Z>0.132805407</Z>
 						<R00>-1</R00>
-						<R01>8.50133963e-010</R01>
-						<R02>4.23458879e-010</R02>
+						<R01>-8.50140069e-010</R01>
+						<R02>-4.23447666e-010</R02>
 						<R10>8.50476911e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000810576021</R12>
+						<R12>0.000781972543</R12>
 						<R20>-4.22769625e-010</R20>
 						<R21>0.000810576021</R21>
 						<R22>-0.999999702</R22>
@@ -504,9 +513,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXFC0761BCEA3D40398CECEF50D2C47BE3">
+			<Item class="Weld" referent="RBX14">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -517,10 +527,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>5.96581813e-005</X>
@@ -528,10 +538,10 @@
 						<Z>0.9335953</Z>
 						<R00>8.14806722e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000811847276</R02>
+						<R02>0.000780701288</R02>
 						<R10>1</R10>
-						<R11>-8.1443452e-010</R11>
-						<R12>-4.58876631e-010</R12>
+						<R11>8.50112314e-010</R11>
+						<R12>4.58008492e-010</R12>
 						<R20>-4.58215271e-010</R20>
 						<R21>0.000811847276</R21>
 						<R22>-0.999999702</R22>
@@ -539,9 +549,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX1525048B882C43BCBA42AAEC9C1342D8">
+			<Item class="Weld" referent="RBX15">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -552,10 +563,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>2.33017072e-005</X>
@@ -563,20 +574,21 @@
 						<Z>0.400390595</Z>
 						<R00>8.35977676e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000817726948</R02>
+						<R02>0.000791507307</R02>
 						<R10>6.19722884e-010</R10>
 						<R11>-0.000817726948</R11>
 						<R12>0.999999702</R12>
 						<R20>1</R20>
-						<R21>-8.35470693e-010</R21>
-						<R22>-6.20406282e-010</R22>
+						<R21>8.30261526e-010</R21>
+						<R22>1.59099317e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX26C58CECF88E4FB685242059DBCCCB35">
+			<Item class="Weld" referent="RBX16">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -587,21 +599,21 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-1.52226988e-007</X>
 						<Y>-0.373301029</Y>
 						<Z>-0.533214867</Z>
 						<R00>1</R00>
-						<R01>-9.17886822e-010</R01>
-						<R02>-2.52556698e-010</R02>
+						<R01>7.91847865e-010</R01>
+						<R02>5.28903865e-010</R02>
 						<R10>9.18089604e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000804378418</R12>
+						<R12>0.000778158777</R12>
 						<R20>2.51818288e-010</R20>
 						<R21>-0.000804378418</R21>
 						<R22>0.999999702</R22>
@@ -609,9 +621,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX8165B3A4580248BC9C30EB1A5234E372">
+			<Item class="Weld" referent="RBX17">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -622,10 +635,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-0.533214211</X>
@@ -636,17 +649,18 @@
 						<R02>0.999999702</R02>
 						<R10>8.15887191e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726948</R12>
+						<R12>0.000791507307</R12>
 						<R20>-1</R20>
-						<R21>8.15380652e-010</R21>
-						<R22>6.19810758e-010</R22>
+						<R21>-8.10171485e-010</R21>
+						<R22>-1.58504349e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXB359C4B6F35244959D90DD2C699B786E">
+			<Item class="Weld" referent="RBX18">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.25072437e-006</X>
@@ -657,10 +671,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000803425093</R12>
+						<R12>0.000789123471</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918752e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915421e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>3.85732619e-008</X>
@@ -679,9 +693,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXE003B17D3AB04CCFADAB56070438277A">
+			<Item class="Weld" referent="RBX19">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -714,9 +729,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX225124718E224E17BD985D495D4CE4B6">
+			<Item class="Weld" referent="RBX20">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -737,21 +753,22 @@
 						<Y>4.02465412e-005</Y>
 						<Z>-0.399536252</Z>
 						<R00>-4.0660561e-010</R00>
-						<R01>0.997999609</R01>
-						<R02>0.0632200539</R02>
+						<R01>0.997998893</R01>
+						<R02>0.0632319078</R02>
 						<R10>3.50466517e-010</R10>
-						<R11>-0.0632200539</R11>
-						<R12>0.997999668</R12>
+						<R11>-0.0632200092</R11>
+						<R12>0.997999609</R12>
 						<R20>1</R20>
-						<R21>4.2794876e-010</R21>
-						<R22>-3.24059835e-010</R22>
+						<R21>3.27715632e-011</R21>
+						<R22>3.47643969e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX4797CA3F2E8342D8967F824CD694539F">
+			<Item class="Weld" referent="RBX21">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -772,21 +789,22 @@
 						<Y>4.67300815e-005</Y>
 						<Z>-0.533184648</Z>
 						<R00>1</R00>
-						<R01>6.89605151e-010</R01>
-						<R02>-1.25792432e-009</R02>
+						<R01>-6.89996116e-010</R01>
+						<R02>1.27482458e-009</R02>
 						<R10>1.29899103e-009</R10>
-						<R11>-0.0631973371</R11>
-						<R12>0.998001039</R12>
+						<R11>-0.0631971732</R11>
+						<R12>0.998001099</R12>
 						<R20>6.08729123e-010</R20>
-						<R21>-0.998001099</R21>
-						<R22>-0.0631973371</R22>
+						<R21>-0.997998476</R21>
+						<R22>-0.0632380918</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXAD8D71DDCCE04999AFC4EE61B84D18EA">
+			<Item class="Weld" referent="RBX22">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -807,21 +825,22 @@
 						<Y>0.373393357</Y>
 						<Z>-3.90072529e-007</Z>
 						<R00>-8.32836911e-010</R00>
-						<R01>0.998000622</R01>
-						<R02>0.0632058904</R02>
+						<R01>0.997998118</R01>
+						<R02>0.0632461831</R02>
 						<R10>1.32148736e-009</R10>
-						<R11>-0.0632058978</R11>
-						<R12>0.998000503</R12>
+						<R11>-0.0632057413</R11>
+						<R12>0.998000562</R12>
 						<R20>1</R20>
-						<R21>9.1469754e-010</R21>
-						<R22>-1.26620492e-009</R22>
+						<R21>-4.5400067e-010</R21>
+						<R22>1.28977651e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX0ECFFF8B7AC14C00ADB94DC0FE76DBC5">
+			<Item class="Weld" referent="RBX23">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -842,21 +861,22 @@
 						<Y>0.132795051</Y>
 						<Z>0.400390744</Z>
 						<R00>3.829842e-010</R00>
-						<R01>-0.0632034019</R01>
-						<R02>0.998000741</R02>
+						<R01>-0.0632033572</R01>
+						<R02>0.998000681</R02>
 						<R10>-4.07727963e-010</R10>
-						<R11>0.998000681</R11>
-						<R12>0.0632034019</R12>
+						<R11>0.997999966</R11>
+						<R12>0.0632152557</R12>
 						<R20>-1</R20>
-						<R21>-4.31118696e-010</R21>
-						<R22>3.56448732e-010</R22>
+						<R21>-3.03974276e-011</R21>
+						<R22>-3.75296128e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX5F9F16773850496BA19F221F5BC55AC2">
+			<Item class="Weld" referent="RBX24">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -877,21 +897,22 @@
 						<Y>-0.400390506</Y>
 						<Z>-0.132816374</Z>
 						<R00>3.90647487e-010</R00>
-						<R01>-0.0632200539</R01>
-						<R02>0.997999668</R02>
+						<R01>-0.0632200092</R01>
+						<R02>0.997999609</R02>
 						<R10>-1</R10>
-						<R11>-4.31644803e-010</R11>
-						<R12>3.64087233e-010</R12>
+						<R11>-2.90755128e-011</R11>
+						<R12>-3.87671339e-010</R12>
 						<R20>4.07763739e-010</R20>
-						<R21>-0.997999609</R21>
-						<R22>-0.0632200539</R22>
+						<R21>-0.997998893</R21>
+						<R22>-0.0632319078</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXAFC6A570C20D42C88761E3F33522D7C2">
+			<Item class="Weld" referent="RBX25">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -912,21 +933,22 @@
 						<Y>1.47659775e-005</Y>
 						<Z>0.132799253</Z>
 						<R00>-1</R00>
-						<R01>-2.34147424e-010</R01>
-						<R02>3.70999564e-010</R02>
+						<R01>2.34150421e-010</R01>
+						<R02>-3.70997927e-010</R02>
 						<R10>3.85058263e-010</R10>
-						<R11>-0.0632105544</R11>
-						<R12>0.998000205</R12>
+						<R11>-0.0632104948</R11>
+						<R12>0.998000264</R12>
 						<R20>-2.10228071e-010</R20>
-						<R21>0.998000264</R21>
-						<R22>0.0632105544</R22>
+						<R21>0.99799931</R21>
+						<R22>0.0632247701</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXA0AA26FEF8A34003B5B2279F90743F4F">
+			<Item class="Weld" referent="RBX26">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -947,21 +969,22 @@
 						<Y>-0.400390744</Y>
 						<Z>0.933587611</Z>
 						<R00>3.49388324e-010</R00>
-						<R01>-0.0632092953</R01>
+						<R01>-0.0632092282</R01>
 						<R02>0.998000324</R02>
 						<R10>1</R10>
-						<R11>2.67267597e-010</R11>
-						<R12>-3.33160693e-010</R12>
+						<R11>-2.68642109e-010</R11>
+						<R12>3.68813091e-010</R12>
 						<R20>-2.45674314e-010</R20>
-						<R21>0.998000324</R21>
-						<R22>0.0632092878</R22>
+						<R21>0.997999251</R21>
+						<R22>0.0632260367</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX094EA6B781B240E688540F75E039A7DA">
+			<Item class="Weld" referent="RBX27">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -982,21 +1005,22 @@
 						<Y>-0.933596671</Y>
 						<Z>0.400390506</Z>
 						<R00>3.70557002e-010</R00>
-						<R01>-0.0632200539</R01>
-						<R02>0.997999668</R02>
+						<R01>-0.0632200092</R01>
+						<R02>0.997999609</R02>
 						<R10>4.07184675e-010</R10>
-						<R11>-0.997999609</R11>
-						<R12>-0.0632200539</R12>
+						<R11>-0.997998893</R11>
+						<R12>-0.0632319078</R12>
 						<R20>1</R20>
-						<R21>4.29796781e-010</R21>
-						<R22>-3.44073547e-010</R22>
+						<R21>3.09235346e-011</R21>
+						<R22>3.67657654e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX18CF92E9014C4C8F95635DE93F8D596D">
+			<Item class="Weld" referent="RBX28">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -1017,21 +1041,22 @@
 						<Y>-0.37332812</Y>
 						<Z>-0.533202708</Z>
 						<R00>1</R00>
-						<R01>6.78072321e-011</R01>
-						<R02>-4.49284138e-010</R02>
+						<R01>-3.35761835e-010</R01>
+						<R02>3.06237286e-010</R02>
 						<R10>4.52671733e-010</R10>
-						<R11>-0.0632067397</R11>
-						<R12>0.998000443</R12>
+						<R11>-0.0632066876</R11>
+						<R12>0.998000503</R12>
 						<R20>3.92738446e-011</R20>
-						<R21>-0.998000562</R21>
-						<R22>-0.0632067248</R22>
+						<R21>-0.997999728</R21>
+						<R22>-0.0632185861</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX0C33DE0639E64FC9854393DC286C8137">
+			<Item class="Weld" referent="RBX29">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -1052,21 +1077,22 @@
 						<Y>4.02465412e-005</Y>
 						<Z>-0.400390506</Z>
 						<R00>4.0660561e-010</R00>
-						<R01>-0.997999609</R01>
-						<R02>-0.0632200539</R02>
+						<R01>-0.997998893</R01>
+						<R02>-0.0632319078</R02>
 						<R10>3.50466517e-010</R10>
-						<R11>-0.0632200539</R11>
-						<R12>0.997999668</R12>
+						<R11>-0.0632200092</R11>
+						<R12>0.997999609</R12>
 						<R20>-1</R20>
-						<R21>-4.2794876e-010</R21>
-						<R22>3.24059835e-010</R22>
+						<R21>-3.27715632e-011</R21>
+						<R22>-3.47643969e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXDEB1C94F99CF4DF0A6CCAD8C5CDBE9E2">
+			<Item class="Weld" referent="RBX30">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>4.58660736e-007</X>
@@ -1099,9 +1125,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXEDB3B56B00034BBF807F861456991D36">
+			<Item class="Weld" referent="RBX31">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1112,10 +1139,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>5.53692553e-006</X>
@@ -1126,17 +1153,18 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX6BC2675FC2714E2C8B3DF88E00E51E56">
+			<Item class="Weld" referent="RBX32">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1147,10 +1175,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.533212543</X>
@@ -1161,17 +1189,18 @@
 						<R02>-0.999999702</R02>
 						<R10>5.0560689e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000812952989</R12>
+						<R12>0.000796274282</R12>
 						<R20>1</R20>
-						<R21>-5.05218589e-010</R21>
-						<R22>-4.77862916e-010</R22>
+						<R21>5.00004205e-010</R21>
+						<R22>1.65627564e-011</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX22C7F3CFE0D745C0B102207091DBC91A">
+			<Item class="Weld" referent="RBX33">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1182,31 +1211,32 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-2.3357552e-007</X>
 						<Y>5.55160077e-005</Y>
 						<Z>-0.533165157</Z>
 						<R00>1</R00>
-						<R01>-1.76372972e-009</R01>
-						<R02>-8.22718005e-010</R02>
+						<R01>1.7806564e-009</R01>
+						<R02>8.21978263e-010</R02>
 						<R10>1.76440684e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000823921058</R12>
+						<R12>0.000768627622</R12>
 						<R20>8.21264445e-010</R20>
 						<R21>-0.000823920942</R21>
-						<R22>0.999999762</R22>
+						<R22>0.999999702</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXBD43A7129689442BB9A3A27FA21D3811">
+			<Item class="Weld" referent="RBX34">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1217,10 +1247,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.533225417</X>
@@ -1228,20 +1258,21 @@
 						<Z>-1.62893741e-007</Z>
 						<R00>-1.04536846e-009</R00>
 						<R01>0.000832025486</R01>
-						<R02>-0.999999642</R02>
+						<R02>-0.999999821</R02>
 						<R10>1.78690496e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000832025427</R12>
+						<R12>0.000777208828</R12>
 						<R20>1</R20>
-						<R21>-1.78603476e-009</R21>
-						<R22>-1.04685483e-009</R22>
+						<R21>1.78084936e-009</R21>
+						<R22>5.85509641e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX0859BC0586C54FFA9FDA3A9CB22BF90E">
+			<Item class="Weld" referent="RBX35">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1252,10 +1283,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-4.40306758e-006</X>
@@ -1263,20 +1294,21 @@
 						<Z>0.400390655</Z>
 						<R00>8.48401349e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000801038579</R02>
+						<R02>0.000774823886</R02>
 						<R10>-6.20273943e-010</R10>
 						<R11>0.000801038579</R11>
 						<R12>-0.999999702</R12>
 						<R20>-1</R20>
-						<R21>8.47904247e-010</R21>
-						<R22>6.20953344e-010</R22>
+						<R21>-8.37917902e-010</R21>
+						<R22>-1.59147542e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX369C32133CEC4F80B8ABEF4A86F525D5">
+			<Item class="Weld" referent="RBX36">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1287,10 +1319,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>1.28626851e-007</X>
@@ -1298,10 +1330,10 @@
 						<Z>-0.13282387</Z>
 						<R00>8.56068161e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000817724678</R02>
+						<R02>0.000791509985</R02>
 						<R10>-1</R10>
-						<R11>8.55560678e-010</R11>
-						<R12>6.21001806e-010</R12>
+						<R11>-8.50351511e-010</R11>
+						<R12>-1.59694299e-010</R12>
 						<R20>6.20301976e-010</R20>
 						<R21>-0.000817724678</R21>
 						<R22>0.999999702</R22>
@@ -1309,9 +1341,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXF35746EC9F3C40B88B5FC9B01C25A88D">
+			<Item class="Weld" referent="RBX37">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1322,21 +1355,21 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>1.20785018e-007</X>
 						<Y>3.03727884e-005</Y>
 						<Z>0.132775158</Z>
 						<R00>-1</R00>
-						<R01>8.50133963e-010</R01>
-						<R02>4.23458851e-010</R02>
+						<R01>-8.50140069e-010</R01>
+						<R02>-4.23447694e-010</R02>
 						<R10>8.50476911e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000810569618</R12>
+						<R12>0.000781978946</R12>
 						<R20>-4.22769625e-010</R20>
 						<R21>0.000810569618</R21>
 						<R22>-0.999999702</R22>
@@ -1344,9 +1377,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX2582E7EC297C4B10AD2F578C27B28C38">
+			<Item class="Weld" referent="RBX38">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1357,10 +1391,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>6.63429382e-005</X>
@@ -1368,10 +1402,10 @@
 						<Z>0.933595598</Z>
 						<R00>8.14806722e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000811841746</R02>
+						<R02>0.000780706818</R02>
 						<R10>1</R10>
-						<R11>-8.14434464e-010</R11>
-						<R12>-4.58876631e-010</R12>
+						<R11>8.50112369e-010</R11>
+						<R12>4.58008492e-010</R12>
 						<R20>-4.58215271e-010</R20>
 						<R21>0.000811841746</R21>
 						<R22>-0.999999702</R22>
@@ -1379,9 +1413,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX64E6F838BF234B87B8D287B0698656B0">
+			<Item class="Weld" referent="RBX39">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1392,10 +1427,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>2.15904674e-005</X>
@@ -1403,20 +1438,21 @@
 						<Z>0.400390595</Z>
 						<R00>8.35977676e-010</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000817724678</R02>
+						<R02>0.000791509985</R02>
 						<R10>6.19722884e-010</R10>
 						<R11>-0.000817724678</R11>
 						<R12>0.999999702</R12>
 						<R20>1</R20>
-						<R21>-8.35470693e-010</R21>
-						<R22>-6.20406337e-010</R22>
+						<R21>8.30261526e-010</R21>
+						<R22>1.59099331e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX2E2B67B13B57428B8597E88F23A235E2">
+			<Item class="Weld" referent="RBX40">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1427,21 +1463,21 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-1.52702455e-007</X>
 						<Y>-0.373297483</Y>
 						<Z>-0.533215165</Z>
 						<R00>1</R00>
-						<R01>-9.17886822e-010</R01>
-						<R02>-2.52556753e-010</R02>
+						<R01>7.91847865e-010</R01>
+						<R02>5.28903921e-010</R02>
 						<R10>9.18089604e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000804377254</R12>
+						<R12>0.000778160116</R12>
 						<R20>2.51818288e-010</R20>
 						<R21>-0.000804377254</R21>
 						<R22>0.999999702</R22>
@@ -1449,9 +1485,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXCD1D996773CB4B8FBB71D4F07E0558A3">
+			<Item class="Weld" referent="RBX41">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1462,10 +1499,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-0.533214509</X>
@@ -1476,17 +1513,18 @@
 						<R02>0.999999702</R02>
 						<R10>8.15887191e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817724678</R12>
+						<R12>0.000791509985</R12>
 						<R20>-1</R20>
-						<R21>8.15380652e-010</R21>
-						<R22>6.19810814e-010</R22>
+						<R21>-8.10171485e-010</R21>
+						<R22>-1.58504362e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX1DA5247B2CF8496E8703F5E46939144F">
+			<Item class="Weld" referent="RBX42">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.53692553e-006</X>
@@ -1497,10 +1535,10 @@
 						<R02>-0.999999702</R02>
 						<R10>4.65420175e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.00080342195</R12>
+						<R12>0.000789126614</R12>
 						<R20>1</R20>
-						<R21>-4.65249311e-010</R21>
-						<R22>-2.12918766e-010</R22>
+						<R21>4.6525081e-010</R21>
+						<R22>2.12915435e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>3.86851866e-008</X>
@@ -1519,9 +1557,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXDA5504FE9FC4456F8E5FAEABA355F207">
+			<Item class="Weld" referent="RBX43">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1554,9 +1593,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX97F4A94B7D284333858FC0CD5446FFEF">
+			<Item class="Weld" referent="RBX44">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1589,9 +1629,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXAE4EBD1C71CF422B97DA16DAE8EFA3EA">
+			<Item class="Weld" referent="RBX45">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1612,21 +1653,22 @@
 						<Y>5.64174661e-005</Y>
 						<Z>-0.533183694</Z>
 						<R00>1</R00>
-						<R01>5.16648224e-010</R01>
-						<R02>-1.33828371e-009</R02>
+						<R01>-5.1479393e-010</R01>
+						<R02>1.35508649e-009</R02>
 						<R10>1.29899103e-009</R10>
-						<R11>0.0697453171</R11>
-						<R12>0.997564912</R12>
+						<R11>0.0697455108</R11>
+						<R12>0.997564793</R12>
 						<R20>6.08729123e-010</R20>
-						<R21>-0.997564912</R21>
-						<R22>0.0697453246</R22>
+						<R21>-0.997567654</R21>
+						<R22>0.0697046071</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXA9457FE513CB4407B83C923F91A5060F">
+			<Item class="Weld" referent="RBX46">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1647,21 +1689,22 @@
 						<Y>0.373397857</Y>
 						<Z>-4.03579065e-007</Z>
 						<R00>-8.32836911e-010</R00>
-						<R01>0.997565448</R01>
-						<R02>-0.0697367489</R02>
+						<R01>0.997568309</R01>
+						<R02>-0.0696965307</R02>
 						<R10>1.32148736e-009</R10>
-						<R11>0.0697367489</R11>
-						<R12>0.997565448</R12>
+						<R11>0.0697369501</R11>
+						<R12>0.997565389</R12>
 						<R20>1</R20>
-						<R21>7.38653139e-010</R21>
-						<R22>-1.37634937e-009</R22>
+						<R21>-2.78900597e-010</R21>
+						<R22>1.33860167e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX6B79D08EC9D04B40B607F6404250B9F9">
+			<Item class="Weld" referent="RBX47">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1682,21 +1725,22 @@
 						<Y>0.132794693</Y>
 						<Z>0.400390744</Z>
 						<R00>3.829842e-010</R00>
-						<R01>0.0697392747</R01>
-						<R02>0.997565329</R02>
+						<R01>0.0697393268</R01>
+						<R02>0.99756521</R02>
 						<R10>-4.07727963e-010</R10>
-						<R11>0.997565329</R11>
-						<R12>-0.0697392747</R12>
+						<R11>0.997566044</R11>
+						<R12>-0.0697274357</R12>
 						<R20>-1</R20>
-						<R21>-3.80026233e-010</R21>
-						<R22>4.10486423e-010</R22>
+						<R21>-7.99115982e-011</R21>
+						<R22>-3.6794745e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXC995B8C131A94E4FABC028BD61E2E300">
+			<Item class="Weld" referent="RBX48">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1717,21 +1761,22 @@
 						<Y>-0.400390506</Y>
 						<Z>-0.132815465</Z>
 						<R00>3.90647487e-010</R00>
-						<R01>0.0697226226</R01>
-						<R02>0.997566521</R02>
+						<R01>0.0697226822</R01>
+						<R02>0.997566402</R02>
 						<R10>-1</R10>
-						<R11>-3.79534459e-010</R11>
-						<R12>4.18127227e-010</R12>
+						<R11>-8.02429304e-011</R11>
+						<R12>-3.80388637e-010</R12>
 						<R20>4.07763739e-010</R20>
-						<R21>-0.997566402</R21>
-						<R22>0.0697226301</R22>
+						<R21>-0.997567236</R21>
+						<R22>0.0697107911</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX61F63F51B2C44909A7059625F730447B">
+			<Item class="Weld" referent="RBX49">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1752,21 +1797,22 @@
 						<Y>4.99412226e-006</Y>
 						<Z>0.132797584</Z>
 						<R00>-1</R00>
-						<R01>-1.82865389e-010</R01>
-						<R02>3.9878062e-010</R02>
+						<R01>1.82868595e-010</R01>
+						<R02>-3.98779315e-010</R02>
 						<R10>3.85058263e-010</R10>
-						<R11>0.0697321221</R11>
-						<R12>0.997565806</R12>
+						<R11>0.0697321892</R11>
+						<R12>0.997565746</R12>
 						<R20>-2.10228071e-010</R20>
-						<R21>0.997565746</R21>
-						<R22>-0.0697321221</R22>
+						<R21>0.9975667</R21>
+						<R22>-0.0697179288</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX4FCA6FC8E06B44079F0F7F83AC7A986E">
+			<Item class="Weld" referent="RBX50">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1787,21 +1833,22 @@
 						<Y>-0.400390744</Y>
 						<Z>0.933588088</Z>
 						<R00>3.49388324e-010</R00>
-						<R01>0.0697333813</R01>
-						<R02>0.997565746</R02>
+						<R01>0.0697334558</R01>
+						<R02>0.997565627</R02>
 						<R10>1</R10>
-						<R11>2.20712254e-010</R11>
-						<R12>-3.65669495e-010</R12>
+						<R11>-2.17345295e-010</R11>
+						<R12>4.0118911e-010</R12>
 						<R20>-2.45674314e-010</R20>
-						<R21>0.997565746</R21>
-						<R22>-0.0697333887</R22>
+						<R21>0.997566819</R21>
+						<R22>-0.0697166622</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX9A372B67E69C494ABA98D03852DC1167">
+			<Item class="Weld" referent="RBX51">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1822,21 +1869,22 @@
 						<Y>-0.933598638</Y>
 						<Z>0.400390506</Z>
 						<R00>3.70557002e-010</R00>
-						<R01>0.0697226226</R01>
-						<R02>0.997566521</R02>
+						<R01>0.0697226822</R01>
+						<R02>0.997566402</R02>
 						<R10>4.07184675e-010</R10>
-						<R11>-0.997566402</R11>
-						<R12>0.0697226301</R12>
+						<R11>-0.997567236</R11>
+						<R12>0.0697107911</R12>
 						<R20>1</R20>
-						<R21>3.80357551e-010</R21>
-						<R22>-3.98045263e-010</R22>
+						<R21>7.94198179e-011</R21>
+						<R22>3.60306673e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXB15EB4A8EEF74E4189656D0E1621EACC">
+			<Item class="Weld" referent="RBX52">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1857,21 +1905,22 @@
 						<Y>-0.373298496</Y>
 						<Z>-0.533198833</Z>
 						<R00>1</R00>
-						<R01>7.61074016e-012</R01>
-						<R02>-4.54308563e-010</R02>
+						<R01>-2.92172536e-010</R01>
+						<R02>3.48069656e-010</R02>
 						<R10>4.52671733e-010</R10>
-						<R11>0.0697359443</R11>
-						<R12>0.997565567</R12>
+						<R11>0.0697359964</R11>
+						<R12>0.997565448</R12>
 						<R20>3.92738446e-011</R20>
-						<R21>-0.997565567</R21>
-						<R22>0.0697359443</R22>
+						<R21>-0.997566283</R21>
+						<R22>0.0697241053</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX9A987F248E90486FB6F7D88C720C27B2">
+			<Item class="Weld" referent="RBX53">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1892,21 +1941,22 @@
 						<Y>3.25288311e-005</Y>
 						<Z>-0.400390536</Z>
 						<R00>4.0660561e-010</R00>
-						<R01>-0.997566402</R01>
-						<R02>0.0697226301</R02>
+						<R01>-0.997567236</R01>
+						<R02>0.0697107911</R02>
 						<R10>3.50466517e-010</R10>
-						<R11>0.0697226226</R11>
-						<R12>0.997566521</R12>
+						<R11>0.0697226822</R11>
+						<R12>0.997566402</R12>
 						<R20>-1</R20>
-						<R21>-3.8118067e-010</R21>
-						<R22>3.77963272e-010</R22>
+						<R21>-7.85967125e-011</R21>
+						<R22>-3.4022471e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX4100D7CFC3264369942D41DECE80EBBE">
+			<Item class="Weld" referent="RBX54">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-3.95431243e-007</X>
@@ -1939,9 +1989,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX54A108E00C5644BB95D9AB5F81172AFC">
+			<Item class="Weld" referent="RBX55">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -1949,13 +2000,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>1.14122267e-005</X>
@@ -1963,20 +2014,21 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX491290736B474A3EBF56BAA9058B441C">
+			<Item class="Weld" referent="RBX56">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -1984,13 +2036,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.5332008</X>
@@ -1998,20 +2050,21 @@
 						<Z>-0.399536431</Z>
 						<R00>-1.4692636e-009</R00>
 						<R01>0.000846330251</R01>
-						<R02>-0.999999642</R02>
+						<R02>-0.999999821</R02>
 						<R10>2.67755484e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000846330193</R12>
+						<R12>0.000762904063</R12>
 						<R20>1</R20>
-						<R21>-2.67631073e-009</R21>
-						<R22>-1.47152912e-009</R22>
+						<R21>2.67116107e-009</R21>
+						<R22>1.01012287e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX2A175F03C6154CE596AE3316145E49D1">
+			<Item class="Weld" referent="RBX57">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2019,34 +2072,35 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-3.54604822e-007</X>
 						<Y>7.10747918e-005</Y>
 						<Z>-0.533170998</Z>
 						<R00>1</R00>
-						<R01>-2.69418865e-009</R01>
-						<R02>-1.24858379e-009</R02>
+						<R01>2.71114486e-009</R01>
+						<R02>1.24778021e-009</R02>
 						<R10>2.69523404e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000838225707</R12>
+						<R12>0.000754322857</R12>
 						<R20>1.24632515e-009</R20>
 						<R21>-0.000838225707</R21>
-						<R22>0.999999642</R22>
+						<R22>0.999999702</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXA7363834AF7D4A2BBF3F1678C9CD8A18">
+			<Item class="Weld" referent="RBX58">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2054,13 +2108,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.533231318</X>
@@ -2068,20 +2122,21 @@
 						<Z>-2.83906502e-007</Z>
 						<R00>-1.47042167e-009</R00>
 						<R01>0.000846330251</R01>
-						<R02>-0.999999642</R02>
+						<R02>-0.999999821</R02>
 						<R10>2.71773581e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000846330193</R12>
+						<R12>0.000762904063</R12>
 						<R20>1</R20>
-						<R21>-2.71649037e-009</R21>
-						<R22>-1.47272128e-009</R22>
+						<R21>2.71134115e-009</R21>
+						<R22>1.0113117e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX0F8C0F7E489044CC8BEDA4B3925B7785">
+			<Item class="Weld" referent="RBX59">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2089,13 +2144,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>5.93345294e-006</X>
@@ -2103,20 +2158,21 @@
 						<Z>0.400390923</Z>
 						<R00>2.71005463e-009</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000829644501</R02>
+						<R02>0.000746218371</R02>
 						<R10>-1.47042467e-009</R10>
 						<R11>0.000829644501</R11>
-						<R12>-0.999999642</R12>
+						<R12>-0.999999702</R12>
 						<R20>-1</R20>
-						<R21>2.70883382e-009</R21>
-						<R22>1.47267265e-009</R22>
+						<R21>-2.69890754e-009</R21>
+						<R22>-1.01076525e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX42A8656B729D4918A93A8A319401635F">
+			<Item class="Weld" referent="RBX60">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2124,13 +2180,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>8.4651374e-006</X>
@@ -2138,20 +2194,21 @@
 						<Z>-0.132810175</Z>
 						<R00>2.71773581e-009</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000846330193</R02>
+						<R02>0.000762904063</R02>
 						<R10>-1</R10>
-						<R11>2.71649037e-009</R11>
-						<R12>1.47272128e-009</R12>
+						<R11>-2.71134115e-009</R11>
+						<R12>-1.0113117e-009</R12>
 						<R20>1.47042167e-009</R20>
 						<R21>-0.000846330251</R21>
-						<R22>0.999999642</R22>
+						<R22>0.999999821</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX100C2996C95747BE9A78C38DB405B40D">
+			<Item class="Weld" referent="RBX61">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2159,34 +2216,35 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>3.62762336e-007</X>
 						<Y>2.95230384e-005</Y>
 						<Z>0.132817402</Z>
 						<R00>-1</R00>
-						<R01>2.71106715e-009</R01>
-						<R02>1.27517807e-009</R02>
+						<R01>-2.71112222e-009</R01>
+						<R02>-1.27506505e-009</R02>
 						<R10>2.71213629e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000839179265</R12>
+						<R12>0.000753369299</R12>
 						<R20>-1.27290256e-009</R20>
 						<R21>0.000839179265</R21>
-						<R22>-0.999999642</R22>
+						<R22>-0.999999702</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX72A2D8DAE5F04A66B404A24E2515C9FD">
+			<Item class="Weld" referent="RBX62">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2194,13 +2252,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.000142092002</X>
@@ -2208,20 +2266,21 @@
 						<Z>0.93360728</Z>
 						<R00>2.67646505e-009</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000840450521</R02>
+						<R02>0.000752098043</R02>
 						<R10>1</R10>
-						<R11>-2.6753646e-009</R11>
-						<R12>-1.31059485e-009</R12>
+						<R11>2.71109335e-009</R11>
+						<R12>1.30962585e-009</R12>
 						<R20>-1.30834588e-009</R20>
 						<R21>0.000840450521</R21>
-						<R22>-0.999999642</R22>
+						<R22>-0.999999702</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX9AA6435624014C15BE4D606A9E3B90EA">
+			<Item class="Weld" referent="RBX63">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2229,13 +2288,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>0.000101452555</X>
@@ -2243,20 +2302,21 @@
 						<Z>0.400390327</Z>
 						<R00>2.69764522e-009</R00>
 						<R01>0.999999702</R01>
-						<R02>0.000846330193</R02>
+						<R02>0.000762904063</R02>
 						<R10>1.46984258e-009</R10>
 						<R11>-0.000846330251</R11>
-						<R12>0.999999642</R12>
+						<R12>0.999999821</R12>
 						<R20>1</R20>
-						<R21>-2.69640044e-009</R21>
-						<R22>-1.47212509e-009</R22>
+						<R21>2.69125122e-009</R21>
+						<R22>1.01071729e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX2C8EBD6DA2DF4C9286B597E63C950074">
+			<Item class="Weld" referent="RBX64">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2264,34 +2324,35 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-3.94687646e-007</X>
 						<Y>-0.373256177</Y>
 						<Z>-0.533165812</Z>
 						<R00>1</R00>
-						<R01>-2.77882695e-009</R01>
-						<R02>-1.10427789e-009</R02>
+						<R01>2.65282685e-009</R01>
+						<R02>1.38052292e-009</R02>
 						<R10>2.77974577e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000832981663</R12>
+						<R12>0.000749555533</R12>
 						<R20>1.10196274e-009</R20>
 						<R21>-0.000832981663</R21>
-						<R22>0.999999642</R22>
+						<R22>0.999999702</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXC4B570144FAD45499F60C5C556591A71">
+			<Item class="Weld" referent="RBX65">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2299,13 +2360,13 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-0.5332008</X>
@@ -2313,20 +2374,21 @@
 						<Z>-0.400390327</Z>
 						<R00>1.4692636e-009</R00>
 						<R01>-0.000846330251</R01>
-						<R02>0.999999642</R02>
+						<R02>0.999999821</R02>
 						<R10>2.67755484e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000846330193</R12>
+						<R12>0.000762904063</R12>
 						<R20>-1</R20>
-						<R21>2.67631073e-009</R21>
-						<R22>1.47152912e-009</R22>
+						<R21>-2.67116107e-009</R21>
+						<R22>-1.01012287e-009</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX71E83D14DB214531A1B3A609946B8368">
+			<Item class="Weld" referent="RBX66">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.14122267e-005</X>
@@ -2334,24 +2396,24 @@
 						<Z>-1.81467669e-007</Z>
 						<R00>-6.37624675e-010</R00>
 						<R01>0.000817726715</R01>
-						<R02>-0.999999762</R02>
+						<R02>-0.999999702</R02>
 						<R10>1.396256e-009</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000817726832</R12>
+						<R12>0.000774821849</R12>
 						<R20>1</R20>
-						<R21>-1.39573431e-009</R21>
-						<R22>-6.38766207e-010</R22>
+						<R21>1.39574785e-009</R21>
+						<R22>6.38736286e-010</R22>
 					</CoordinateFrame>
 					<CoordinateFrame name="C1">
 						<X>-2.17958132e-008</X>
 						<Y>2.16124681e-005</Y>
 						<Z>-0.933588922</Z>
 						<R00>1</R00>
-						<R01>-7.00479896e-010</R01>
-						<R02>-5.50027579e-010</R02>
+						<R01>6.95267954e-010</R01>
+						<R02>8.87237436e-011</R02>
 						<R10>7.00928149e-010</R10>
 						<R11>0.999999702</R11>
-						<R12>0.000815343345</R12>
+						<R12>0.000793890911</R12>
 						<R20>5.49456258e-010</R20>
 						<R21>-0.000815343345</R21>
 						<R22>0.999999702</R22>
@@ -2359,9 +2421,10 @@
 					<string name="Name">Weld</string>
 					<Ref name="Part0">null</Ref>
 					<Ref name="Part1">null</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXE2DC3416623048F19EEEA79BF30E8177">
+			<Item class="Weld" referent="RBX67">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>2.73681553e-006</X>
@@ -2392,11 +2455,12 @@
 						<R22>-1</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX8B0EB5E0CE194E7192F9C93392270804">
+			<Item class="Weld" referent="RBX68">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>2.58500165e-007</X>
@@ -2427,11 +2491,12 @@
 						<R22>-0.996537805</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX720C2F6EA068450585ECFF5D180CF544">
+			<Item class="Weld" referent="RBX69">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.81937775e-006</X>
@@ -2462,11 +2527,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXEA3F786C3E0A4DB3AEB9BE8526676D30">
+			<Item class="Weld" referent="RBX70">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>5.19993637e-006</X>
@@ -2497,11 +2563,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBXCD99025A6644485D98DC910C466DA105">
+			<Item class="Weld" referent="RBX71">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-4.51719643e-007</X>
@@ -2532,11 +2599,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX9838C76021AC44F3A4E93ABE1D40A30E">
+			<Item class="Weld" referent="RBX72">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.26816673e-007</X>
@@ -2567,11 +2635,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX7802B9784CDB4BA6A3BB934DAB67FDE4">
+			<Item class="Weld" referent="RBX73">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>8.01678993e-007</X>
@@ -2602,11 +2671,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX149E92AF1E6C457291A1325A3FCD9E11">
+			<Item class="Weld" referent="RBX74">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>1.07855703e-006</X>
@@ -2637,11 +2707,12 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
-			<Item class="Weld" referent="RBX0FF3DB8D90ED43B2B6E0710D2553AB89">
+			<Item class="Weld" referent="RBX75">
 				<Properties>
 					<CoordinateFrame name="C0">
 						<X>-2.96131202e-006</X>
@@ -2672,33 +2743,31 @@
 						<R22>-1.00000012</R22>
 					</CoordinateFrame>
 					<string name="Name">Weld</string>
-					<Ref name="Part0">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
-					<Ref name="Part1">RBX839822E29C3F47578B87911C3B31F7AA</Ref>
+					<Ref name="Part0">RBX1</Ref>
+					<Ref name="Part1">RBX1</Ref>
+					<bool name="archivable">true</bool>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Script" referent="RBX2958D3D9D535488BAB91CB861BEB142D">
+		<Item class="Script" referent="RBX76">
 			<Properties>
 				<bool name="Disabled">false</bool>
 				<Content name="LinkedSource"><null></null></Content>
 				<string name="Name">HealingPotionScript</string>
-				<string name="ScriptGuid">{02C5D3C7-2252-47CC-A7DA-CE7AFD57D1D9}</string>
-				<ProtectedString name="Source"><![CDATA[--Updated for R15 avatar by StarWars
-
-local Tool = script.Parent;
+				<string name="Source">local Tool = script.Parent;
 
 
 
 
-local GlassBreak = Instance.new("Sound")
-GlassBreak.Name = "GlassBreak"
-GlassBreak.SoundId = "http://www.roblox.com/asset/?id=11415738"
+local GlassBreak = Instance.new(&quot;Sound&quot;)
+GlassBreak.Name = &quot;GlassBreak&quot;
+GlassBreak.SoundId = &quot;http://www.roblox.com/asset/?id=11415738&quot;
 GlassBreak.Volume = 1
 GlassBreak.Parent = Tool.Handle
 
-local DrinkSound = Instance.new("Sound")
-DrinkSound.Name = "Drink"
-DrinkSound.SoundId = "http://www.roblox.com/asset/?id=10722059"
+local DrinkSound = Instance.new(&quot;Sound&quot;)
+DrinkSound.Name = &quot;Drink&quot;
+DrinkSound.SoundId = &quot;http://www.roblox.com/asset/?id=10722059&quot;
 DrinkSound.Volume = .5
 DrinkSound.Parent = Tool.Handle
 
@@ -2715,10 +2784,10 @@ function onActivated()
 
 
 	DrinkSound:Play()
-	DrinkSound:Destroy()
+	DrinkSound:Remove()
 	wait(3)
 	
-	local h = Tool.Parent:FindFirstChild("Humanoid")
+	local h = Tool.Parent:FindFirstChild(&quot;Humanoid&quot;)
 	if (h ~= nil) then
 		h.Health = h.MaxHealth
 	else
@@ -2735,17 +2804,11 @@ function onActivated()
 	local p = Tool.Handle:Clone()
 	GlassBreak.Parent = p
 	p.Transparency = 0
-	local Torso = Tool.Parent:FindFirstChild("Torso") or Tool.Parent:FindFirstChild("RightUpperArm")
 	
-	if Torso then
-		local RightArm = Torso:FindFirstChild("Right Shoulder") or Torso:FindFirstChild("RightShoulder")
-		if RightArm then
-			RightArm.MaxVelocity = 0.7
-			RightArm.DesiredAngle = 3.6
-			wait(.1)
-			RightArm.MaxVelocity = 1
-		end
-	end
+	Tool.Parent.Torso[&quot;Right Shoulder&quot;].MaxVelocity = 0.7
+	Tool.Parent.Torso[&quot;Right Shoulder&quot;].DesiredAngle = 3.6
+	wait(.1)
+	Tool.Parent.Torso[&quot;Right Shoulder&quot;].MaxVelocity = 1
 
 	local dir = h.Parent.Head.CFrame.lookVector
 	p.Velocity = (dir * 60) + Vector3.new(0,30,0)
@@ -2755,7 +2818,7 @@ function onActivated()
 	p.Parent = game.Workspace
 
 
-	script.Parent:Destroy()
+	script.Parent:Remove()
 
 end
 
@@ -2765,16 +2828,18 @@ end
 
 script.Parent.Activated:connect(onActivated)
 script.Parent.Equipped:connect(onEquipped)
-]]></ProtectedString>
+</string>
+				<bool name="archivable">true</bool>
 			</Properties>
 		</Item>
-		<Item class="Script" referent="RBX80EC782DF84E4B24802269B7DA0F8168">
+		<Item class="Script" referent="RBX77">
 			<Properties>
 				<bool name="Disabled">true</bool>
 				<Content name="LinkedSource"><null></null></Content>
 				<string name="Name">Glass</string>
-				<string name="ScriptGuid">{FF1A7629-A0FB-44AA-93F5-3F6913ECBD3A}</string>
-				<ProtectedString name="Source"><![CDATA[function Touched(part)
+				<string name="Source">print(&quot;lol&quot;)
+
+function Touched(part)
 	script.Parent.GlassBreak:Play()
 	con:disconnect()
 end
@@ -2784,7 +2849,8 @@ end
 con = script.Parent.Touched:connect(Touched)
 
 wait(30)
-script.Parent:Destroy()]]></ProtectedString>
+script.Parent:Remove()</string>
+				<bool name="archivable">true</bool>
 			</Properties>
 		</Item>
 	</Item>

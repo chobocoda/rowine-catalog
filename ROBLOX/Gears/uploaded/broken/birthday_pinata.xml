@@ -1,0 +1,410 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Tool" referent="RBX0">
+		<Properties>
+			<bool name="CanBeDropped">true</bool>
+			<bool name="Enabled">true</bool>
+			<CoordinateFrame name="Grip">
+				<X>0.200000003</X>
+				<Y>0</Y>
+				<Z>0.200000003</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<bool name="ManualActivationOnly">false</bool>
+			<string name="Name">BirthdayPinata</string>
+			<bool name="RequiresHandle">true</bool>
+			<Content name="TextureId"><url>http://www.roblox.com/asset/?id=34220764</url></Content>
+			<string name="ToolTip"></string>
+		</Properties>
+		<Item class="Part" referent="RBX1">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>-15.1999969</X>
+					<Y>102.400002</Y>
+					<Z>48</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>-1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>1</R20>
+					<R21>0</R21>
+					<R22>-0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Handle</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">1</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>2</X>
+					<Y>2</Y>
+					<Z>1</Z>
+				</Vector3>
+			</Properties>
+			<Item class="SpecialMesh" referent="RBX2">
+				<Properties>
+					<token name="LODX">2</token>
+					<token name="LODY">2</token>
+					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=34220149</url></Content>
+					<token name="MeshType">5</token>
+					<string name="Name">Mesh</string>
+					<Vector3 name="Offset">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Vector3 name="Scale">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=34220408</url></Content>
+					<Vector3 name="VertexColor">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX11D3930BD47D4315A6404994F7DA229A">
+				<Properties>
+					<float name="EmitterSize">10</float>
+					<bool name="Looped">false</bool>
+					<string name="Name">Break</string>
+					<bool name="PlayOnRemove">false</bool>
+					<float name="PlaybackSpeed">1</float>
+					<bool name="Playing">false</bool>
+					<token name="RollOffMode">0</token>
+					<Ref name="SoundGroup">null</Ref>
+					<Content name="SoundId"><url>rbxassetid://34300463</url></Content>
+					<double name="TimePosition">0</double>
+					<float name="Volume">0.5</float>
+					<float name="xmlRead_MaxDistance_3">10000</float>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Camera" referent="RBX4C7BDB2FC5624396931A791A2E67F182">
+			<Properties>
+				<CoordinateFrame name="CFrame">
+					<X>-13.4005699</X>
+					<Y>102.892517</Y>
+					<Z>47.409565</Z>
+					<R00>-0.26889047</R00>
+					<R01>-0.210065067</R01>
+					<R02>0.939984381</R02>
+					<R10>-0</R10>
+					<R11>0.975927114</R11>
+					<R12>0.218097404</R12>
+					<R20>-0.963170886</R20>
+					<R21>0.0586443134</R21>
+					<R22>-0.262417436</R22>
+				</CoordinateFrame>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<float name="FieldOfView">59.9999962</float>
+				<CoordinateFrame name="Focus">
+					<X>-14.9985437</X>
+					<Y>102.521751</Y>
+					<Z>47.8556747</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="HeadLocked">true</bool>
+				<float name="HeadScale">1</float>
+				<string name="Name">ThumbnailCamera</string>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX04C51197D72F41E783C04A8F8823340F">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Script</string>
+				<string name="ScriptGuid">{06688071-2512-42E2-8926-72188FCCBF53}</string>
+				<ProtectedString name="Source"><![CDATA[--Rescripted by Luckymaxer
+
+Tool = script.Parent
+Handle = Tool:WaitForChild("Handle")
+
+Players = game:GetService("Players")
+Debris = game:GetService("Debris")
+
+PinataScript = script:WaitForChild("PinataScript")
+
+ToolEquipped = false
+
+function PinataName()
+	if not CheckIfAlive() then
+		return
+	end
+	return (Player.Name .. "'s Pinata")
+end
+
+function PinataExists()
+	if not CheckIfAlive() then
+		return false
+	end
+	return game:GetService("Workspace"):FindFirstChild(PinataName())
+end
+
+function Activated()
+	if not ToolEquipped or not CheckIfAlive() or not Tool.Enabled or PinataExists() then
+		return
+	end
+	
+	local PinataModel = Instance.new("Model")
+	PinataModel.Name = PinataName()
+	
+	local Pinata = Handle:clone()
+	Pinata.Name = "Head"
+	Pinata.CanCollide = true
+	Pinata.Size = Vector3.new(3, 3, 1)
+	Pinata.CFrame = CFrame.new((RootPart.Position.x + (RootPart.CFrame.lookVector.Unit.X * 8)), RootPart.Position.Y, (RootPart.Position.Z + (RootPart.CFrame.lookVector.Unit.Z * 8)))
+	Pinata.Parent = PinataModel
+	
+	local PinataNameTag = Instance.new("Humanoid")
+	PinataNameTag.MaxHealth = 0
+	PinataNameTag.Health = 0
+	PinataNameTag.Parent = PinataModel
+	
+	local Creator = Instance.new("ObjectValue")
+	Creator.Name = "Creator"
+	Creator.Value = Player
+	Creator.Parent = PinataModel
+	
+	local Health = Instance.new("NumberValue")
+	Health.Name = "Health"
+	Health.Value = 100
+	Health.Parent = PinataModel
+	
+	local BodyPos = Instance.new("BodyPosition")
+	BodyPos.position = (Pinata.CFrame * CFrame.new(0, 5, 0)).p
+	BodyPos.P = 8000
+	BodyPos.D = BodyPos.P
+	BodyPos.MaxForce = Vector3.new(BodyPos.P, BodyPos.P, BodyPos.P)
+	BodyPos.Parent = Pinata
+
+	local BodyGyro = Instance.new("BodyGyro")
+	BodyGyro.P = 50
+	BodyGyro.D = BodyGyro.P
+	BodyGyro.MaxTorque = Vector3.new(BodyGyro.P, 0, 0)
+	BodyGyro.CFrame = Pinata.CFrame
+	BodyGyro.Parent = Pinata
+	
+	local PinataScriptCopy = PinataScript:clone()
+	PinataScriptCopy.Disabled = false
+	PinataScriptCopy.Parent = PinataModel
+	
+	Debris:AddItem(PinataModel, (60 * 3))
+	
+	PinataModel.Parent = game:GetService("Workspace")
+	
+	Tool:Destroy()
+	
+end
+
+function CheckIfAlive()
+	return (((Player and Player.Parent and Character and Character.Parent and Humanoid and Humanoid.Health > 0 and RootPart and RootPart.Parent) and true) or false)
+end
+
+function Equipped()
+	Character = Tool.Parent
+	Player = Players:GetPlayerFromCharacter(Character)
+	Humanoid = Character:FindFirstChild("Humanoid")
+	RootPart = Character:FindFirstChild("HumanoidRootPart")
+	if not CheckIfAlive() then
+		return
+	end
+	ToolEquipped = true
+end
+
+function Unequipped()
+	ToolEquipped = false
+end
+
+Tool.Activated:connect(Activated)
+Tool.Equipped:connect(Equipped)
+Tool.Unequipped:connect(Unequipped)]]></ProtectedString>
+			</Properties>
+			<Item class="Script" referent="RBXCDA6845E94F047F5967A20625F40499E">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">PinataScript</string>
+					<string name="ScriptGuid">{F7C2C32D-EA15-46E5-8DE8-3B2C39923C39}</string>
+					<ProtectedString name="Source"><![CDATA[--Rescripted by Luckymaxer
+
+Pinata = script.Parent
+Part = Pinata:WaitForChild("Head")
+Mesh = Part:WaitForChild("Mesh")
+
+InsertService = game:GetService("InsertService")
+Debris = game:GetService("Debris")
+
+Creator = Pinata:FindFirstChild("Creator")
+Health = Pinata:WaitForChild("Health")
+
+Module = require(191816425)
+
+BasePart = Instance.new("Part")
+BasePart.Material = Enum.Material.Plastic
+BasePart.Shape = Enum.PartType.Block
+BasePart.TopSurface = Enum.SurfaceType.Smooth
+BasePart.BottomSurface = Enum.SurfaceType.Smooth
+BasePart.FormFactor = Enum.FormFactor.Custom
+BasePart.Size = Vector3.new(0.2, 0.2, 0.2)
+BasePart.Locked = true
+BasePart.CanCollide = true
+BasePart.Anchored = false
+
+Sounds = {
+	Break = Part:FindFirstChild("Break"),
+}
+
+Breaking = false
+Touching = false
+
+function GetCreator()
+	return (((Creator and Creator.Value and Creator.Value.Parent and Creator.Value:IsA("Player")) and Creator.Value) or nil)
+end
+
+CreatorPlayer = GetCreator()
+ModuleTable = Module.GetTable({Key = "BirthdayPinata", Player = CreatorPlayer})
+ModuleFunctions = ModuleTable.GetData({Player = CreatorPlayer})
+
+Scale = 1
+Increment = 0.1
+while Scale < 1.6 do
+	Mesh.Scale = Vector3.new(Scale, Scale, Scale)
+	Scale = (Scale + Increment)
+	wait()
+end
+
+function InsertAsset(AssetId)
+	local AssetModel = InsertService:LoadAsset(AssetId)
+	local Asset = AssetModel:GetChildren()[1]:Clone()
+	Debris:AddItem(AssetModel, 0.5)
+	return Asset
+end
+
+function Burst()
+	local Colors = {"Bright red", "Bright yellow", "Bright orange"}
+	for i = 1, 20 do
+		local Confetti = BasePart:Clone()
+		Confetti.Name = "Effect"
+		Confetti.Size = Vector3.new(1, 0.4, 1)
+		Confetti.BrickColor = BrickColor.new(Colors[math.random(1, #Colors)])
+		Confetti.Material = Enum.Material.Grass
+		Confetti.CFrame = (Part.CFrame * CFrame.new(math.random(-1, 1), math.random(-1, 1), math.random(-1, 1)))
+		Debris:AddItem(Confetti, (4 + (math.random(50, 200) * 0.01)))
+		Confetti.Parent = game:GetService("Workspace")
+	end
+	
+	local Gears = ModuleFunctions.GetGearIds()
+	for i, v in pairs(Gears) do
+		local Gear = InsertAsset(v)
+		local Handle = Gear:FindFirstChild("Handle")
+		if Handle then
+			Handle.CFrame = (Part.CFrame * CFrame.new(math.random(-1, 1), math.random(-1, 1), math.random(-1, 1)))
+			Gear.Parent = game:GetService("Workspace")
+		end
+	end
+end
+
+function CheckHealth()
+	if Health.Value > 0 or Breaking then
+		return
+	end
+	Breaking = true
+	Burst()
+	Part.Transparency = 1
+	Part.CanCollide = false
+	Part.Anchored = true
+	Part.Name = "Effect"
+	Sounds.Break:Play()
+	Debris:AddItem(Pinata, 2)
+	
+end
+
+function Touched(Hit)
+	if not Hit or not Hit.Parent or not Part.CanCollide or Touching or Breaking then
+		return
+	end
+	Touching = true
+	Health.Value = (Health.Value - (Hit.Velocity.Magnitude / 50))
+	wait(0.1)
+	Touching = false
+end
+
+Health.Changed:connect(function()
+	CheckHealth()
+end)
+
+Part.Touched:connect(Touched)
+]]></ProtectedString>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+</roblox>

@@ -1,7 +1,7 @@
 <roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBXACCCAEC2C895486BA2D91EFAE70D9B39">
+	<Item class="Tool" referent="RBX0">
 		<Properties>
 			<bool name="CanBeDropped">true</bool>
 			<bool name="Enabled">true</bool>
@@ -19,14 +19,11 @@
 				<R21>1</R21>
 				<R22>0</R22>
 			</CoordinateFrame>
-			<bool name="ManualActivationOnly">false</bool>
 			<string name="Name">FreakyFridayPotion</string>
-			<bool name="RequiresHandle">true</bool>
-			<BinaryString name="Tags"></BinaryString>
 			<Content name="TextureId"><url>http://www.roblox.com/asset/?id=78673347</url></Content>
 			<string name="ToolTip"></string>
 		</Properties>
-		<Item class="Part" referent="RBXC3574E6D274E490D96F4B215911FF350">
+		<Item class="Part" referent="RBX1">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<float name="BackParamA">-0.5</float>
@@ -37,26 +34,22 @@
 				<float name="BottomParamB">0.5</float>
 				<token name="BottomSurface">4</token>
 				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">107</int>
 				<CoordinateFrame name="CFrame">
-					<X>6.9399991</X>
-					<Y>19.7299995</Y>
-					<Z>9.68999958</Z>
+					<X>-1.78813934e-007</X>
+					<Y>0.299999803</Y>
+					<Z>8.94069672e-008</Z>
 					<R00>1</R00>
-					<R01>-0</R01>
+					<R01>0</R01>
 					<R02>0</R02>
 					<R10>0</R10>
-					<R11>-0</R11>
+					<R11>0</R11>
 					<R12>1</R12>
 					<R20>0</R20>
 					<R21>-1</R21>
 					<R22>0</R22>
 				</CoordinateFrame>
 				<bool name="CanCollide">true</bool>
-				<int name="CollisionGroupId">0</int>
-				<Color3uint8 name="Color3uint8">4278226844</Color3uint8>
-				<PhysicalProperties name="CustomPhysicalProperties">
-					<CustomPhysics>false</CustomPhysics>
-				</PhysicalProperties>
 				<float name="Elasticity">0.5</float>
 				<float name="Friction">0.300000012</float>
 				<float name="FrontParamA">-0.5</float>
@@ -80,7 +73,6 @@
 					<Y>0</Y>
 					<Z>0</Z>
 				</Vector3>
-				<BinaryString name="Tags"></BinaryString>
 				<float name="TopParamA">-0.5</float>
 				<float name="TopParamB">0.5</float>
 				<token name="TopSurface">3</token>
@@ -99,7 +91,7 @@
 					<Z>1.62999988</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX950DE057ECC1466B90E37A142300E5DD">
+			<Item class="SpecialMesh" referent="RBX2">
 				<Properties>
 					<token name="LODX">2</token>
 					<token name="LODY">2</token>
@@ -116,7 +108,6 @@
 						<Y>1</Y>
 						<Z>1</Z>
 					</Vector3>
-					<BinaryString name="Tags"></BinaryString>
 					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=78673334</url></Content>
 					<Vector3 name="VertexColor">
 						<X>1</X>
@@ -125,329 +116,307 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBX190059B749244431B4C07EEC46F7A03F">
-				<Properties>
-					<CoordinateFrame name="CFrame">
-						<X>0.150000006</X>
-						<Y>-0.150000006</Y>
-						<Z>-0.5</Z>
-						<R00>1</R00>
-						<R01>0</R01>
-						<R02>0</R02>
-						<R10>0</R10>
-						<R11>1</R11>
-						<R12>0</R12>
-						<R20>0</R20>
-						<R21>0</R21>
-						<R22>1</R22>
-					</CoordinateFrame>
-					<string name="Name">RightGripAttachment</string>
-					<BinaryString name="Tags"></BinaryString>
-					<bool name="Visible">false</bool>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Script" referent="RBX4BB5B101752E4CEB8A4F1838C2BD6415">
+		<Item class="LocalScript" referent="RBX3">
 			<Properties>
 				<bool name="Disabled">false</bool>
 				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">Script</string>
-				<string name="ScriptGuid">{C9D8337A-32CE-4C8D-80C3-9A5686F405F5}</string>
-				<ProtectedString name="Source"><![CDATA[local Tool = script.Parent
-local Players = game:GetService'Players'
+				<string name="Name">Local Gui</string>
+				<ProtectedString name="Source">local Tool = script.Parent;
 
-function BuildCharacterRig(Character, AppearanceModel, IsR15)
-	local Humanoid = Character:FindFirstChildOfClass("Humanoid")	
-	if not Humanoid and Humanoid.Health > 0 then return end 	
+local stillEquipped = true
+function onEquippedLocal(mouse)
+&#9;stillEquipped = true
+&#9;if mouse == nil then
+&#9;&#9;print(&quot;Mouse not found&quot;)
+&#9;&#9;return
+&#9;end
+&#9;
+&#9;while stillEquipped do
+&#9;&#9;print(&quot;Setting Mouse to Go&quot;)
+&#9;&#9;mouse.Icon = &quot;rbxasset://textures\\GunCursor.png&quot;
 
-	local AnimateScript = Character:FindFirstChild("Animate")
-	if not AnimateScript then return end 
-	
-	for _, Object in next, Character:GetChildren() do
-		if Object:IsA("Accessory") then
-			Object:Destroy()
-		elseif Object.Name == "Head" then
-			local Face = Object:FindFirstChild("face")
-			if Face then
-				Face.Texture = "rbxasset://textures/face.png"
-			end
-		elseif Object:IsA("Shirt") or Object:IsA("Pants") or Object:IsA("ShirtGraphic") or Object:IsA("BodyColors") then
-			Object:Destroy()
-		end
-	end
-	
-	if IsR15 then		
-		for _, Object in next, AppearanceModel:GetChildren() do
-			if Object.Name == "R15" and Object:IsA("Folder") then
-				for _, Part in next, Object:GetChildren() do
-					if Part:IsA("BasePart") then
-						local HasLimb = Character:FindFirstChild(Part.Name)
-						if HasLimb then
-							HasLimb:Destroy()
-						end
-						Part.Parent = Character
-						Humanoid:BuildRigFromAttachments()
-					end
-				end
-			elseif Object.Name == "R15Anim" and Object:IsA("Folder") then
-				for _, AnimationObject in next, Object:GetChildren() do
-					local HasAnimObject = AnimateScript:FindFirstChild(AnimationObject.Name)
-					if HasAnimObject then
-						HasAnimObject:Destroy()
-					end
-					
-					AnimationObject.Parent = AnimateScript
-				end
-			elseif Object:IsA("Accessory") then
-				Humanoid:AddAccessory(Object)
-			elseif Object:IsA("Pants") or Object:IsA("Shirt") or Object:IsA("ShirtGraphic") or Object:IsA("BodyColors") then
-				Object.Parent = Character
-			elseif Object.Name == "face" then
-				local Head = Character:FindFirstChild("Head")
-				if Head then
-					local Face = Head:FindFirstChild("face")
-					if Face then
-						Face.Texture = Object.Texture
-					else
-						Object.Parent = Head
-					end
-				end
-			elseif Object.Name == "BodyDepthScale" or Object.Name == "BodyHeightScale" or Object.Name == "BodyWidthScale" or Object.Name == "HeadScale" then
-				local ValueObject = Humanoid:FindFirstChild(Object.Name)
-				if ValueObject then
-					ValueObject.Value = Object.Value
-				else
-					Object.Parent = Humanoid
-				end
-			end
-		end				
-	else
-		for _, Object in next, AppearanceModel:GetChildren() do
-			if Object:IsA("Accessory") then
-				Humanoid:AddAccessory(Object)
-			elseif Object:IsA("Pants") or Object:IsA("Shirt") or Object:IsA("ShirtGraphic") or Object:IsA("BodyColors") then
-				Object.Parent = Character
-			elseif Object.Name == "face" then
-				Object.Parent = Character:FindFirstChild("Head")				
-			end
-		end
-	end
+&#9;&#9;while Tool.Enabled and stillEquipped do
+&#9;&#9;&#9;wait(.01)
+&#9;&#9;end
+&#9;
+&#9;&#9;print(&quot;Setting Mouse To Wait&quot;)
+&#9;&#9;mouse.Icon = &quot;rbxasset://textures\\GunWaitCursor.png&quot;
+
+&#9;&#9;while not Tool.Enabled and stillEquipped do
+&#9;&#9;&#9;wait(.01)
+&#9;&#9;end
+&#9;end
 end
 
-Tool.SwapWith.OnServerEvent:connect(function(client, character)
-	if client == Players:GetPlayerFromCharacter(Tool.Parent) and client.Character then
-		local otherPlayer = Players:GetPlayerFromCharacter(character)
-		if not otherPlayer then return end -- Remove to make it work with NPCs
-		
-		local ClientCharacterAppearance = Players:GetCharacterAppearanceAsync(client.UserId)		
-		local OtherCharacterAppearance = Players:GetCharacterAppearanceAsync(1)
-		
-		
-		local ClientHumanoid = client.Character:FindFirstChildOfClass("Humanoid")
-		local OtherHumanoid = character:FindFirstChildOfClass("Humanoid")
-		if ClientHumanoid and OtherHumanoid then
-			BuildCharacterRig(client.Character, OtherCharacterAppearance, ClientHumanoid.RigType == Enum.HumanoidRigType.R15)
-			BuildCharacterRig(character, ClientCharacterAppearance, OtherHumanoid.RigType == Enum.HumanoidRigType.R15)
-		end
-		
-		ClientCharacterAppearance:Destroy()
-		OtherCharacterAppearance:Destroy()
+function onUnequippedLocal()
+&#9;stillEquipped = false
+end
 
-		if otherPlayer and client.Character:FindFirstChild'HumanoidRootPart' and character:FindFirstChild'HumanoidRootPart' and client.Character.HumanoidRootPart.Anchored == false and character.HumanoidRootPart.Anchored == false then
-			local posA, posB = client.Character.HumanoidRootPart.CFrame, character.HumanoidRootPart.CFrame
-			client.Character.HumanoidRootPart.CFrame = posB
-			character.HumanoidRootPart.CFrame = posA
-		end
-		
-	end 
-end)]]></ProtectedString>
-				<BinaryString name="Tags"></BinaryString>
+
+Tool.Equipped:connect(onEquippedLocal)
+Tool.Unequipped:connect(onUnequippedLocal)
+</ProtectedString>
 			</Properties>
 		</Item>
-		<Item class="RemoteEvent" referent="RBX26C12D5479234E60A5EA3D892494B2AD">
-			<Properties>
-				<string name="Name">SwapWith</string>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-		</Item>
-		<Item class="LocalScript" referent="RBXF9750D5CDE864BC8BF70BF5BA7249750">
+		<Item class="LocalScript" referent="RBX4">
 			<Properties>
 				<bool name="Disabled">false</bool>
 				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">LocalScript</string>
-				<string name="ScriptGuid">{C7057F00-3033-4560-B00A-2EF33151C4DD}</string>
-				<ProtectedString name="Source"><![CDATA[local Tool = script.Parent
-Tool.Enabled = true
-local Players = game:GetService'Players'
+				<string name="Name">FridayScript</string>
+				<ProtectedString name="Source">--[[
 
-GetCharacterFromPart = function(part)
-	local current = part
-	local character = nil
-	while true do
-		for i, child in next, current:GetChildren() do
-			if child:IsA'Humanoid' then
-				character = current
-				break
-			end
-		end
-		
-		if character then
-			break
-		else
-			current = current.Parent
-			
-			if not current or current == game then
-				break
-			end
-		end
-	end
-	
-	return character, character and Players:GetPlayerFromCharacter(character)
+&#9;// Don&apos;t forget to add helper GUI stuff 
+]]
+
+
+local Tool = script.Parent 
+local Potion = Tool.Handle
+
+Tool.Enabled = true 
+
+local vCharacter
+local vTorso
+local vHumanoid 
+local vPlayer 
+
+local OtherPlayer = nil 
+local OtherCharacter = nil
+local OtherHumanoid
+local OtherTorso
+
+local SwapSound = nil 
+local SwapAnim 
+local OtherSwapAnim
+
+local RBX_Debris = game:GetService(&quot;Debris&quot;)
+
+local Mouse = nil 
+
+local cloneId = 68452456
+local Clone = game:GetService(&quot;InsertService&quot;):LoadAsset(cloneId):GetChildren()[1] 
+local cChildren = Clone:GetChildren()
+for i = 1, #cChildren do 
+&#9;if cChildren[i]:IsA(&quot;Script&quot;) then 
+&#9;&#9;cChildren[i]:Destroy()
+&#9;end 
+end 
+local Clone2 = Clone:Clone()
+
+local function spawnClone(character, torso, clone)
+&#9;if character and torso and clone then
+&#9;&#9;local thisClone = clone:Clone()
+
+&#9;&#9;thisClone.Name = character.Name 
+
+&#9;&#9;local target = thisClone:FindFirstChild(&quot;Target&quot;)
+&#9;&#9;if target then
+&#9;&#9;&#9;target.Value = character:FindFirstChild(&quot;Humanoid&quot;)
+&#9;&#9;else
+&#9;&#9;&#9;target = Instance.new(&quot;ObjectValue&quot;)
+&#9;&#9;&#9;target.Name = &quot;Target&quot;
+&#9;&#9;&#9;target.Parent = thisClone
+&#9;&#9;&#9;target.Value = character:FindFirstChild(&quot;Humanoid&quot;)
+&#9;&#9;end      &#9;&#9;
+&#9;&#9;
+&#9;&#9;thisClone:MoveTo(torso.Position + Vector3.new(5, 0, 5))&#9;&#9;
+
+&#9;&#9;return thisClone 
+&#9;end
+end 
+
+local function dressClone(character, clone)
+&#9;if character then
+&#9;&#9;local children = character:GetChildren()
+&#9;&#9;for i = 1, #children do
+&#9;&#9;&#9;if children[i] then
+&#9;&#9;&#9;&#9;if children[i].ClassName == &quot;Hat&quot; then
+&#9;&#9;&#9;&#9;&#9;-- Special
+&#9;&#9;&#9;&#9;&#9;local hat = Instance.new(&quot;Hat&quot;)
+&#9;&#9;&#9;&#9;&#9;local Hpart = children[i].Handle:clone()
+&#9;&#9;&#9;&#9;&#9;Hpart.Parent = hat
+&#9;&#9;&#9;&#9;&#9;Hpart.Position = clone.Head.Position
+&#9;&#9;&#9;&#9;&#9;hat.Name = children[i].Name
+&#9;&#9;&#9;&#9;&#9;hat.Parent = clone
+&#9;&#9;&#9;&#9;&#9;hat.AttachmentPos = children[i].AttachmentPos
+&#9;&#9;&#9;&#9;&#9;hat.AttachmentRight = children[i].AttachmentRight
+&#9;&#9;&#9;&#9;&#9;hat.AttachmentUp = children[i].AttachmentUp
+&#9;&#9;&#9;&#9;&#9;hat.AttachmentForward = children[i].AttachmentForward
+&#9;&#9;&#9;&#9;elseif children[i]:IsA(&quot;BasePart&quot;) then
+&#9;&#9;&#9;&#9;&#9;if clone:FindFirstChild(children[i].Name) and clone[children[i].Name]:IsA(&quot;BasePart&quot;) then 
+&#9;&#9;&#9;&#9;&#9;&#9;clone[children[i].Name].BrickColor = children[i].BrickColor 
+&#9;&#9;&#9;&#9;&#9;end 
+&#9;&#9;&#9;&#9;elseif children[i].ClassName == &quot;ForceField&quot; or children[i]:IsA(&quot;Humanoid&quot;) then
+&#9;&#9;&#9;&#9;-- Ignore it
+&#9;&#9;&#9;&#9;else
+&#9;&#9;&#9;&#9;&#9;children[i]:Clone().Parent = clone&#9;&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;&#9;return clone
+&#9;end
+end 
+
+local function onActivated()
+&#9;if Tool.Enabled == false then 
+&#9;&#9;return 
+&#9;end 
+
+&#9;if not vTorso or not vHumanoid then 
+&#9;&#9;return 
+&#9;end 
+
+&#9;local target = Mouse.Target
+&#9;if target and target.Parent then &#9;
+&#9;&#9;print(target)
+&#9;&#9;local humanoid = target.Parent:FindFirstChild(&quot;Humanoid&quot;)
+&#9;&#9;if target.Parent:IsA(&quot;Hat&quot;) and target.Parent.Parent then 
+&#9;&#9;&#9;humanoid = target.Parent.Parent:FindFirstChild(&quot;Humanoid&quot;)
+&#9;&#9;end 
+&#9;&#9;if humanoid then 
+&#9;&#9;&#9;OtherPlayer = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+&#9;&#9;&#9;OtherHumanoid = humanoid
+&#9;&#9;&#9;OtherTorso = OtherPlayer.Character:FindFirstChild(&quot;Torso&quot;)
+&#9;&#9;end 
+
+&#9;&#9;if OtherPlayer and OtherHumanoid and OtherTorso then &#9;
+&#9;&#9;&#9;local cf1 = vTorso.CFrame
+&#9;&#9;&#9;local cf2 = OtherTorso.CFrame
+&#9;&#9;&#9;print(cf1.p, cf2.p)
+&#9;&#9;&#9;OtherCharacter = OtherHumanoid.Parent
+&#9;&#9;&#9;SwapAnim = vHumanoid:LoadAnimation(Tool.SwapAnim)
+&#9;&#9;&#9;if SwapAnim then SwapAnim:Play() end 
+&#9;&#9;&#9;OtherSwapAnim = OtherHumanoid:LoadAnimation(Tool.SwapAnim)
+&#9;&#9;&#9;if OtherSwapAnim then OtherSwapAnim:Play() end 
+&#9;&#9;&#9;vHumanoid.WalkSpeed = 0.0
+&#9;&#9;&#9;OtherHumanoid.WalkSpeed = 0.0
+&#9;&#9;&#9;wait(2.0)
+&#9;&#9;&#9;SwapSound = Tool:FindFirstChild(&quot;SwapSound&quot;)
+&#9;&#9;&#9;if SwapSound then SwapSound:Play() end 
+&#9;&#9;&#9;vHumanoid.WalkSpeed = 16.0 
+&#9;&#9;&#9;OtherHumanoid.WalkSpeed = 16.0 
+&#9;&#9;&#9;&#9;
+&#9;&#9;&#9;local c = spawnClone(vCharacter, vTorso, Clone) 
+&#9;&#9;&#9;local c1 = spawnClone(OtherCharacter, OtherTorso, Clone)
+&#9;&#9;&#9;c1 = dressClone(vCharacter, c1)
+&#9;&#9;&#9;c = dressClone(OtherCharacter, c)&#9;&#9;&#9;
+&#9;&#9;&#9;vPlayer.Character = c
+&#9;&#9;&#9;OtherPlayer.Character = c1
+&#9;&#9;&#9;vPlayer.Character.Parent = game.Workspace
+&#9;&#9;&#9;vPlayer.Character.Torso.CFrame = cf2
+&#9;&#9;&#9;OtherPlayer.Character.Parent = game.Workspace
+&#9;&#9;&#9;OtherPlayer.Character.Torso.CFrame = cf1
+&#9;&#9;end 
+&#9;end 
+end 
+
+local function onEquipped(mouse)
+&#9;vCharacter = Tool.Parent 
+&#9;vTorso = vCharacter:FindFirstChild(&quot;Torso&quot;)
+&#9;vHumanoid = vCharacter:FindFirstChild(&quot;Humanoid&quot;)&#9;
+&#9;vPlayer = game.Players:GetPlayerFromCharacter(vCharacter)
+&#9;Mouse = mouse 
+end 
+
+local function onUnequipped()
+&#9;if SwapSound then SwapSound:Stop() end
+&#9;if SwapAnim then SwapAnim:Stop() end 
+&#9;if OtherSwapAnim then OtherSwapAnim:Stop() end 
+&#9;if vHumanoid then vHumanoid.WalkSpeed = 16.0  end 
+&#9;if OtherHumanoid then OtherHumanoid.WalkSpeed = 16.0  end 
+end 
+
+Tool.Equipped:connect(onEquipped)
+Tool.Activated:connect(onActivated)
+Tool.Unequipped:connect(onUnequipped)</ProtectedString>
+			</Properties>
+		</Item>
+		<Item class="Animation" referent="RBX5">
+			<Properties>
+				<Content name="AnimationId"><url>http://www.roblox.com/Asset?ID=78674033</url></Content>
+				<string name="Name">SwapAnim</string>
+			</Properties>
+		</Item>
+		<Item class="LocalScript" referent="RBX6">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">GuiScript</string>
+				<ProtectedString name="Source">local Tool = script.Parent
+local Lantern = Tool.Handle
+
+local vCharacter
+local vPlayer
+local genericTextLabel
+
+local sg
+local frame
+
+function onEquipped()
+     vCharacter = Tool.Parent
+     vPlayer = game.Players:GetPlayerFromCharacter(vCharacter)
+     if vPlayer then
+          local playerGui = vPlayer:FindFirstChild(&quot;PlayerGui&quot;)
+          if playerGui and playerGui:FindFirstChild(&quot;LanternGui&quot;) == nil then
+               sg = Instance.new(&quot;ScreenGui&quot;)
+               sg.Name = &quot;LanternGui&quot;
+               sg.Parent = playerGui
+
+               frame = Instance.new(&quot;Frame&quot;)
+               frame.Parent = sg
+               frame.Size = UDim2.new(0, 240, 0, 30)
+               frame.Position = UDim2.new(0.5, -120, 1, -130)
+               frame.Style = Enum.FrameStyle.RobloxRound
+
+               genericTextLabel = Instance.new(&quot;TextLabel&quot;)
+               genericTextLabel.BackgroundTransparency = 1.0
+               genericTextLabel.Size = UDim2.new(1, 0, 1, 0)
+               genericTextLabel.Visible = true
+               genericTextLabel.ZIndex = 10
+               genericTextLabel.FontSize = Enum.FontSize.Size10
+               genericTextLabel.Font = Enum.Font.Legacy
+               genericTextLabel.TextColor3 = Color3.new(1, 127/255, 0)
+               genericTextLabel.TextXAlignment = Enum.TextXAlignment.Center
+               genericTextLabel.TextYAlignment = Enum.TextYAlignment.Top
+               genericTextLabel.Parent = frame
+               genericTextLabel.Text = &quot;Click on someone to swap bodies!!&quot;
+          end
+     end
 end
 
-Tool.Equipped:connect(function(mouse)
-	mouse.Icon = 'rbxasset://textures/GunCursor.png'
-	
-	mouse.Button1Down:connect(function()
-		local hit = mouse.Target
-		local char = GetCharacterFromPart(hit)
-		
-		if char then
-			Tool.SwapWith:FireServer(char)
-			
-			mouse.Icon = 'rbxasset://textures/GunWaitCursor.png'
-			Tool.Enabled = false
-			wait(2)
-			mouse.Icon = 'rbxasset://textures/GunCursor.png'
-			Tool.Enabled = true
-		end
-	end)
-end)]]></ProtectedString>
-				<BinaryString name="Tags"></BinaryString>
+function onUnequipped()
+     if sg then sg:Remove() end
+end
+
+Tool.Equipped:connect(onEquipped)
+Tool.Unequipped:connect(onUnequipped)
+
+</ProtectedString>
 			</Properties>
 		</Item>
-		<Item class="Keyframe" referent="RBX6F47FBCD90EA4D32BACDCF9F603A71CB">
+		<Item class="Camera" referent="RBX7">
 			<Properties>
-				<string name="Name">ThumbnailPose</string>
-				<BinaryString name="Tags"></BinaryString>
-				<float name="Time">0</float>
-			</Properties>
-			<Item class="Pose" referent="RBX0D04D5347EAF4D41BBDB8EBD6DD712CD">
-				<Properties>
-					<CoordinateFrame name="CFrame">
-						<X>0</X>
-						<Y>0</Y>
-						<Z>0</Z>
-						<R00>1</R00>
-						<R01>0</R01>
-						<R02>0</R02>
-						<R10>0</R10>
-						<R11>1</R11>
-						<R12>0</R12>
-						<R20>0</R20>
-						<R21>0</R21>
-						<R22>1</R22>
-					</CoordinateFrame>
-					<token name="EasingDirection">1</token>
-					<token name="EasingStyle">0</token>
-					<string name="Name">UpperTorso</string>
-					<BinaryString name="Tags"></BinaryString>
-					<float name="Weight">0</float>
-				</Properties>
-				<Item class="Pose" referent="RBX191299C6C2F54384B993558EDC39AFAA">
-					<Properties>
-						<CoordinateFrame name="CFrame">
-							<X>0</X>
-							<Y>-6.70552254e-08</Y>
-							<Z>-5.96046448e-08</Z>
-							<R00>1</R00>
-							<R01>0</R01>
-							<R02>0</R02>
-							<R10>0</R10>
-							<R11>0.173648193</R11>
-							<R12>-0.98480773</R12>
-							<R20>0</R20>
-							<R21>0.98480773</R21>
-							<R22>0.173648193</R22>
-						</CoordinateFrame>
-						<token name="EasingDirection">1</token>
-						<token name="EasingStyle">0</token>
-						<string name="Name">RightUpperArm</string>
-						<BinaryString name="Tags"></BinaryString>
-						<float name="Weight">1</float>
-					</Properties>
-					<Item class="Pose" referent="RBX28BE4A6E68914E6E9968DED7AE9CFD38">
-						<Properties>
-							<CoordinateFrame name="CFrame">
-								<X>0</X>
-								<Y>-1.49011612e-08</Y>
-								<Z>3.7252903e-09</Z>
-								<R00>1</R00>
-								<R01>0</R01>
-								<R02>0</R02>
-								<R10>0</R10>
-								<R11>0.98480773</R11>
-								<R12>-0.173648179</R12>
-								<R20>0</R20>
-								<R21>0.173648179</R21>
-								<R22>0.98480773</R22>
-							</CoordinateFrame>
-							<token name="EasingDirection">1</token>
-							<token name="EasingStyle">0</token>
-							<string name="Name">RightLowerArm</string>
-							<BinaryString name="Tags"></BinaryString>
-							<float name="Weight">1</float>
-						</Properties>
-						<Item class="Pose" referent="RBX982FC947EC9C4C5099E5D987AA0962D7">
-							<Properties>
-								<CoordinateFrame name="CFrame">
-									<X>0</X>
-									<Y>0</Y>
-									<Z>0</Z>
-									<R00>1</R00>
-									<R01>0</R01>
-									<R02>0</R02>
-									<R10>0</R10>
-									<R11>1</R11>
-									<R12>0</R12>
-									<R20>0</R20>
-									<R21>0</R21>
-									<R22>1</R22>
-								</CoordinateFrame>
-								<token name="EasingDirection">1</token>
-								<token name="EasingStyle">0</token>
-								<string name="Name">RightHand</string>
-								<BinaryString name="Tags"></BinaryString>
-								<float name="Weight">1</float>
-							</Properties>
-						</Item>
-					</Item>
-				</Item>
-			</Item>
-		</Item>
-		<Item class="Camera" referent="RBX73A92B874D6244BFA4BD08E95AC536D0">
-			<Properties>
-				<CoordinateFrame name="CFrame">
-					<X>7.43711662</X>
-					<Y>20.376688</Y>
-					<Z>11.5194902</Z>
-					<R00>0.965017974</R00>
-					<R01>-0.0844948664</R01>
-					<R02>0.248195469</R02>
-					<R10>-0</R10>
-					<R11>0.94664675</R11>
-					<R12>0.322273344</R12>
-					<R20>-0.262183845</R20>
-					<R21>-0.310999572</R21>
-					<R22>0.913531065</R22>
-				</CoordinateFrame>
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>-0.0515371189</X>
+					<Y>0.454823375</Y>
+					<Z>2.46032286</Z>
+					<R00>0.999780715</R00>
+					<R01>0.00131499197</R01>
+					<R02>-0.0209013075</R02>
+					<R10>-0</R10>
+					<R11>0.998026788</R11>
+					<R12>0.0627901927</R12>
+					<R20>0.020942634</R20>
+					<R21>-0.062776424</R21>
+					<R22>0.99780786</R22>
+				</CoordinateFrame>
 				<float name="FieldOfView">70</float>
 				<CoordinateFrame name="Focus">
-					<X>6.9407258</X>
-					<Y>19.7321415</Y>
-					<Z>9.69242859</Z>
+					<X>-1.78813934e-007</X>
+					<Y>0.299999833</Y>
+					<Z>8.94069672e-008</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -458,10 +427,7 @@ end)]]></ProtectedString>
 					<R21>0</R21>
 					<R22>1</R22>
 				</CoordinateFrame>
-				<bool name="HeadLocked">true</bool>
-				<float name="HeadScale">1</float>
 				<string name="Name">ThumbnailCamera</string>
-				<BinaryString name="Tags"></BinaryString>
 			</Properties>
 		</Item>
 	</Item>
