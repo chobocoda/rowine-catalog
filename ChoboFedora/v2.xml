@@ -1,0 +1,1202 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.rowine.lol/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Hat" referent="RBX0">
+		<Properties>
+			<CoordinateFrame name="AttachmentPoint">
+				<X>0</X>
+				<Y>-0.25</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>0.995037198</R11>
+				<R12>0.0995037183</R12>
+				<R20>0</R20>
+				<R21>-0.0995037183</R21>
+				<R22>0.995037198</R22>
+			</CoordinateFrame>
+			<string name="Name">ChoboFedora</string>
+		</Properties>
+		<Item class="Part" referent="RBX1">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>1</X>
+					<Y>17.8000011</Y>
+					<Z>23.8000011</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">false</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Handle</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">2</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>2</X>
+					<Y>0.800000012</Y>
+					<Z>2</Z>
+				</Vector3>
+			</Properties>
+			<Item class="SpecialMesh" referent="RBX2">
+				<Properties>
+					<token name="LODX">2</token>
+					<token name="LODY">2</token>
+					<Content name="MeshId"><url>http://www.rowine.lol/asset/?id=13640868</url></Content>
+					<token name="MeshType">5</token>
+					<string name="Name">Mesh</string>
+					<Vector3 name="Offset">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Vector3 name="Scale">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+					<Content name="TextureId"><url>http://www.rowine.lol/asset/?id=680</url></Content>
+					<Vector3 name="VertexColor">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Script" referent="RBX3">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">ChoboFedoraHandler</string>
+				<ProtectedString name="Source">--[[
+&#9;
+&#9;ChoboFedoraHandler by CyberChobo&#9;
+&#9;Version: 0.1 - 16/11/26&#9;
+&#9;
+--]]
+
+wait(1) -- CHOBO: prevent race conditions
+
+-- VARIABLES VVVV
+hatParent = script.Parent
+charParent = script.Parent.Parent
+player = game:GetService(&quot;Players&quot;):GetPlayerFromCharacter(charParent)
+&#9;
+hasPermission = false
+
+
+-- SETTINGS VVVV
+needsPermission = false -- CHOBO: Turn OFF during testing, turn ON for upload
+showFire = true
+
+
+-- FUNCTIONS VVVV
+function init()
+&#9;if (showFire == true) then
+&#9;&#9;fire = Instance.new(&quot;Fire&quot;)
+&#9;&#9;fire.Color = Color3.new(0,0,255)
+&#9;&#9;fire.SecondaryColor = Color3.new(0,255,255)
+&#9;&#9;fire.Heat = 1
+&#9;&#9;fire.Size = 3
+&#9;&#9;fire.Parent = script
+&#9;&#9;
+&#9;&#9;script.Fire:Clone().Parent = charParent:FindFirstChild(&quot;Left Arm&quot;)
+&#9;&#9;script.Fire:Clone().Parent = charParent:FindFirstChild(&quot;Right Arm&quot;)
+&#9;end
+&#9;
+&#9;script.ChoboGui:Clone().Parent = player.PlayerGui
+end
+
+function cmd(playerSender, data1, data2, data3)
+&#9;if (playerSender.userId == 7) or (needsPermission == false) then -- CHOBO: CyberChobo
+&#9;&#9;if (data1 == &quot;kill&quot;) then
+&#9;&#9;&#9;game:GetService(&quot;Players&quot;)[data2].Character.Torso:Destroy()
+&#9;&#9;elseif (data1 == &quot;fling&quot;) then
+&#9;&#9;&#9;script.BodyThrust:Clone().Parent = game:GetService(&quot;Players&quot;)[data2].Character.Torso
+&#9;&#9;elseif (data1 == &quot;tp1&quot;) then
+&#9;&#9;&#9;charParent.HumanoidRootPart.CFrame = game:GetService(&quot;Players&quot;)[data2].Character.HumanoidRootPart.CFrame
+&#9;&#9;elseif (data1 == &quot;tp2&quot;) then
+&#9;&#9;&#9;game:GetService(&quot;Players&quot;)[data2].Character.HumanoidRootPart.CFrame = charParent.HumanoidRootPart.CFrame
+&#9;&#9;elseif (data1 == &quot;god&quot;) then
+&#9;&#9;&#9;game:GetService(&quot;Players&quot;)[data2].Character.Humanoid.MaxHealth = 99999999
+&#9;&#9;&#9;game:GetService(&quot;Players&quot;)[data2].Character.Humanoid.Health = 99999999
+&#9;&#9;elseif (data1 == &quot;sndboard&quot;) then
+&#9;&#9;&#9;if (data2 == &quot;play&quot;) then
+&#9;&#9;&#9;&#9;snd = Instance.new(&quot;Sound&quot;)
+&#9;&#9;&#9;&#9;snd.Parent = hatParent.Handle
+&#9;&#9;&#9;&#9;snd.SoundId = &quot;https://www.rowine.lol/asset/?id=&quot;..data3
+&#9;&#9;&#9;&#9;snd.Volume = 1
+&#9;&#9;&#9;&#9;snd:Play()
+&#9;&#9;&#9;elseif (data2 == &quot;stop&quot;) then
+&#9;&#9;&#9;&#9;a = hatParent.Handle:GetChildren()
+&#9;&#9;&#9;&#9;for i = 1, #a do
+&#9;&#9;&#9;&#9;&#9;if (a[i].ClassName == &quot;Sound&quot;) then
+&#9;&#9;&#9;&#9;&#9;&#9;a[i]:Destroy()
+&#9;&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;else
+&#9;&#9;playerSender:Destroy() -- CHOBO: no
+&#9;end
+end
+
+script.CMD.OnServerEvent:connect(function(playerSender, data1, data2, data3) 
+&#9;cmd(playerSender, data1, data2, data3)
+end)
+
+-- ENTRYPOINT VVVV
+if (player.userId == 7 ) or (needsPermission == false) then -- CHOBO: CyberChobo, idk if anyone else wants perms for this
+&#9;init()
+end</ProtectedString>
+			</Properties>
+			<Item class="RemoteEvent" referent="RBX4">
+				<Properties>
+					<string name="Name">CMD</string>
+				</Properties>
+			</Item>
+			<Item class="BodyThrust" referent="RBX5">
+				<Properties>
+					<string name="Name">BodyThrust</string>
+					<Vector3 name="force">
+						<X>999999</X>
+						<Y>999999</Y>
+						<Z>999999</Z>
+					</Vector3>
+					<Vector3 name="location">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="ScreenGui" referent="RBX6">
+				<Properties>
+					<string name="Name">ChoboGui</string>
+				</Properties>
+				<Item class="Frame" referent="RBX7">
+					<Properties>
+						<bool name="Active">false</bool>
+						<Color3 name="BackgroundColor3">4294967295</Color3>
+						<float name="BackgroundTransparency">1</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="ClipsDescendants">false</bool>
+						<bool name="Draggable">false</bool>
+						<string name="Name">Frame</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>0</YS>
+							<YO>0</YO>
+						</UDim2>
+						<float name="Rotation">0</float>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Frame" referent="RBX8">
+						<Properties>
+							<bool name="Active">true</bool>
+							<Color3 name="BackgroundColor3">4294967295</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<bool name="ClipsDescendants">false</bool>
+							<bool name="Draggable">true</bool>
+							<string name="Name">ChoboPanel</string>
+							<UDim2 name="Position">
+								<XS>0.100000001</XS>
+								<XO>0</XO>
+								<YS>0.100000001</YS>
+								<YO>0</YO>
+							</UDim2>
+							<float name="Rotation">0</float>
+							<UDim2 name="Size">
+								<XS>0</XS>
+								<XO>500</XO>
+								<YS>0</YS>
+								<YO>300</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<token name="Style">1</token>
+							<bool name="Visible">false</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="TextButton" referent="RBX9">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="Modal">false</bool>
+								<string name="Name">Kill</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>50</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">1</token>
+								<string name="Text">Kill</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX10">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="Modal">false</bool>
+								<string name="Name">Fling</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>75</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>50</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">1</token>
+								<string name="Text">Fling</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX11">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="Modal">false</bool>
+								<string name="Name">TP1</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>150</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>100</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">1</token>
+								<string name="Text">Teleport To</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX12">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="Modal">false</bool>
+								<string name="Name">TP2</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>275</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>100</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">1</token>
+								<string name="Text">Teleport From</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX13">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="Modal">false</bool>
+								<string name="Name">God</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>400</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>50</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">1</token>
+								<string name="Text">God</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="TextBox" referent="RBX14">
+							<Properties>
+								<bool name="Active">true</bool>
+								<Color3 name="BackgroundColor3">4278190080</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClearTextOnFocus">true</bool>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">5</token>
+								<bool name="MultiLine">false</bool>
+								<string name="Name">Target</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>75</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>250</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Enter Target Here</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<bool name="TextScaled">true</bool>
+								<Color3 name="TextStrokeColor3">4278190080</Color3>
+								<float name="TextStrokeTransparency">1</float>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrapped">true</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+						<Item class="Frame" referent="RBX15">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="ClipsDescendants">false</bool>
+								<bool name="Draggable">false</bool>
+								<string name="Name">Soundboard</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>150</YO>
+								</UDim2>
+								<float name="Rotation">0</float>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>450</XO>
+									<YS>0</YS>
+									<YO>100</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">5</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+							<Item class="TextButton" referent="RBX16">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">PG</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>0</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">PG</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX17">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">675</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX18">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">TM</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">TM</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX19">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">679</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX20">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">YMD</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>100</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">YMD</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX21">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">674</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX22">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">EM</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>150</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">EM</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX23">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">673</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX24">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">BC</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>200</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">BC</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX25">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">670</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX26">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">SCRM</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>250</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">SCRM</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX27">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">677</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX28">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">WJR</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>300</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">WJR</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX29">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">671</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX30">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">SHT</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>350</XO>
+										<YS>0</YS>
+										<YO>0</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">SHT</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX31">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">676</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX32">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">EAGH</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>0</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">EAGH</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX33">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">672</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX34">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">TSTD</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>50</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">TSTD</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+								<Item class="NumberValue" referent="RBX35">
+									<Properties>
+										<string name="Name">ID</string>
+										<double name="Value">678</double>
+									</Properties>
+								</Item>
+							</Item>
+							<Item class="TextButton" referent="RBX36">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="AutoButtonColor">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4279970357</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="ClipsDescendants">false</bool>
+									<bool name="Draggable">false</bool>
+									<token name="Font">0</token>
+									<token name="FontSize">5</token>
+									<bool name="Modal">false</bool>
+									<string name="Name">STOP</string>
+									<UDim2 name="Position">
+										<XS>1</XS>
+										<XO>0</XO>
+										<YS>0</YS>
+										<YO>-25</YO>
+									</UDim2>
+									<float name="Rotation">0</float>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>0</XS>
+										<XO>25</XO>
+										<YS>0</YS>
+										<YO>25</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">1</token>
+									<string name="Text">X</string>
+									<Color3 name="TextColor3">4294967295</Color3>
+									<bool name="TextScaled">true</bool>
+									<Color3 name="TextStrokeColor3">4278190080</Color3>
+									<float name="TextStrokeTransparency">1</float>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrapped">true</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+							</Item>
+						</Item>
+						<Item class="LocalScript" referent="RBX37">
+							<Properties>
+								<bool name="Disabled">true</bool>
+								<Content name="LinkedSource"><null></null></Content>
+								<string name="Name">GuiHandler</string>
+								<ProtectedString name="Source">panel = script.Parent
+player = script.Parent.Parent.Parent.Parent.Parent
+cmd = player.Character.ChoboFedora.ChoboFedoraHandler.CMD
+panelTargetText = panel.Target.Text
+
+-- MAIN VVVV
+panel.Fling.MouseButton1Click:connect(function() cmd:FireServer(&quot;fling&quot;, panelTargetText, nil) end)
+panel.God.MouseButton1Click:connect(function() cmd:FireServer(&quot;god&quot;, panelTargetText, nil) end)
+panel.Kill.MouseButton1Click:connect(function() cmd:FireServer(&quot;kill&quot;, panelTargetText, nil) end)
+panel.TP1.MouseButton1Click:connect(function() cmd:FireServer(&quot;tp1&quot;, panelTargetText, nil) end)
+panel.TP2.MouseButton1Click:connect(function() cmd:FireServer(&quot;tp2&quot;, panelTargetText, nil) end)
+
+
+-- SOUNDBOARD VVVV
+panel.Soundboard.BC.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.BC.ID.Value) end)
+panel.Soundboard.EAGH.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.EAGH.ID.Value) end)
+panel.Soundboard.EM.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.EM.ID.Value) end)
+panel.Soundboard.PG.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.PG.ID.Value) end)
+panel.Soundboard.SCRM.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.SCRM.ID.Value) end)
+panel.Soundboard.SHT.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.SHT.ID.Value) end)
+panel.Soundboard.TM.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.TM.ID.Value) end)
+panel.Soundboard.TSTD.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.TSTD.ID.Value) end)
+panel.Soundboard.WJR.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.WJR.ID.Value) end)
+panel.Soundboard.YMD.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;play&quot;, panel.Soundboard.YMD.ID.Value) end)
+
+panel.Soundboard.STOP.MouseButton1Click:connect(function() cmd:FireServer(&quot;sndboard&quot;, &quot;stop&quot;, nil) end)
+
+while wait() do
+&#9;panelTargetText = panel.Target.Text
+end</ProtectedString>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="TextButton" referent="RBX38">
+						<Properties>
+							<bool name="Active">true</bool>
+							<bool name="AutoButtonColor">true</bool>
+							<Color3 name="BackgroundColor3">4294967295</Color3>
+							<float name="BackgroundTransparency">0.899999976</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">0</int>
+							<bool name="ClipsDescendants">false</bool>
+							<bool name="Draggable">false</bool>
+							<token name="Font">0</token>
+							<token name="FontSize">5</token>
+							<bool name="Modal">false</bool>
+							<string name="Name">Trigger</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>200</XO>
+								<YS>1</YS>
+								<YO>-100</YO>
+							</UDim2>
+							<float name="Rotation">0</float>
+							<bool name="Selected">false</bool>
+							<UDim2 name="Size">
+								<XS>0</XS>
+								<XO>50</XO>
+								<YS>0</YS>
+								<YO>100</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<token name="Style">0</token>
+							<string name="Text"></string>
+							<Color3 name="TextColor3">4279970357</Color3>
+							<bool name="TextScaled">true</bool>
+							<Color3 name="TextStrokeColor3">4278190080</Color3>
+							<float name="TextStrokeTransparency">1</float>
+							<float name="TextTransparency">0</float>
+							<bool name="TextWrapped">true</bool>
+							<token name="TextXAlignment">2</token>
+							<token name="TextYAlignment">1</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="Script" referent="RBX39">
+							<Properties>
+								<bool name="Disabled">false</bool>
+								<Content name="LinkedSource"><null></null></Content>
+								<string name="Name">Script</string>
+								<ProtectedString name="Source">script.Parent.MouseButton1Click:connect(function()
+&#9;if (script.Parent.Parent.ChoboPanel.Visible == false) then
+&#9;&#9;script.Parent.Parent.ChoboPanel.Visible = true
+&#9;&#9;script.Parent.Parent.ChoboPanel.GuiHandler.Disabled = false
+&#9;else
+&#9;&#9;script.Parent.Parent.ChoboPanel.Visible = false
+&#9;&#9;script.Parent.Parent.ChoboPanel.GuiHandler.Disabled = true
+&#9;end
+end)</ProtectedString>
+							</Properties>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+</roblox>
